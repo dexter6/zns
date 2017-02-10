@@ -1,0 +1,55 @@
+<!-- Header -->
+
+<header class="w3-container w3-red w3-center w3-padding-2">
+    <img src="../../../assets/img/suci_lopovi.jpg">
+
+
+
+</header>
+<div class="w3-row-padding  w3-padding-64 w3-container">
+    <button class="btn btn-success" ng-click="dodajToggle()" ng-show="!add && level=='admin'">Dodaj vijest</button>
+    <button class="btn btn-danger" ng-click="dodajToggle()" ng-show="add">Nemoj dodati!</button><br>
+    <div class="well w3-third" ng-show="add">
+        <form name="novaVijest" novalidate ng-submit="addVijest(novaVijest.$valid)">
+            <fieldset class="form-group" ng-class="{'has-error': novaVijest.naslov.$invalid && !novaVijest.naslov.$pristine}">
+                <label>Naslov:</label>
+                <input name = "naslov" class="form-control" type="text" ng-model="new.naslov" required>
+            </fieldset>
+            <fieldset class="form-group" ng-class="{'has-error': novaVijest.tekst.$invalid && !novaVijest.tekst.$pristine}">
+                <label>Sadržaj:</label><br>
+                <textarea name="tekst" id="editor2" ng-model="new.tekst"></textarea>
+            </fieldset>
+            <button class="btn btn-success" ng-disabled="novaVijest.$invalid">Dodaj vijest</button>
+        </form>
+    </div>
+</div>
+<div class="w3-row-padding  w3-padding-64 w3-container " ng-repeat="vijest in vijesti">
+    <div class="w3-content">
+        <div class="w3-third">
+
+            <img ng-src="{{vijest.slika}}" width="95%"/><br>
+            <button ng-hide="editId!=$index" class="btn btn-info">Promijeni sliku</button>
+
+        </div>
+
+        <div class="w3-twothird">
+            <h1 ng-hide="editId==$index">{{vijest.naslov}}</h1>
+            <p ng-hide="editId!=$index"><input type="text" class="form-control" ng-model="vijest.naslov" ></p>
+            <h5 class="w3-padding-32">Napisao/la {{vijest.autor}}</h5>
+            <h6 class="w3-text-grey">{{vijest.timestamp | date: "dd.MM.y - H:mm " }}</h6>
+
+
+
+            <p ng-hide="editId==$index" class="w3-text-black">{{vijest.tekst}}</p>
+            <p ng-hide="editId!=$index"><textarea name="editor1" id="editor1" ng-model="vijest.tekst" cols="75" rows="10"></textarea></p>
+            <button ng-hide="editId==$index || level!='admin'" class="btn btn-info" ng-click="setEdit($index)">Uredi</button>
+            <button ng-hide="editId!=$index" class="btn btn-info" ng-click="doneEditing($index)">Gotovo</button>
+
+            <button class="btn btn-danger" ng-click="delete($index)" ng-hide="level!='admin'">Obriši</button>
+        </div>
+
+    </div>
+
+
+</div>
+

@@ -1,0 +1,3128 @@
+*
+{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	position:relative;
+
+/*	font-size: 16pt;
+	line-height: 23pt;*/
+}
+
+.clear
+{
+	clear:both;
+}
+
+.hidden
+{
+	display:none;
+}
+
+b, strong
+{
+	font-weight:bold;
+}
+
+em, i
+{
+    font-style:italic;
+}
+
+#wrapper1
+{
+	min-width:320px;
+	overflow:hidden;
+	position:relative;
+}
+
+.wrapper2
+{
+	position:relative;
+	margin:0 auto;
+	min-width:320px;
+	clear:both;
+	z-index:22;
+}
+
+/* header i navigacija */
+
+.wrapper2.headerContainer
+{
+}
+
+.wrapper2 > #header
+{
+	height:143px;
+}
+
+.wrapper2 > #header > #toolbar
+{
+	display:none;
+}
+
+.wrapper2 > #header > .col1 img#logo
+{
+	width:264px;
+	height:132px;
+}
+
+.wrapper2 > #header > .col2 #navMobile
+{
+    display:none;
+}
+
+#sidr-id-navMobile
+{
+    display:block;
+    position:relative;
+    text-align:center;
+    margin-top:10px;
+}
+
+#sidr-id-navMobile a
+{
+    color:white;
+    text-decoration:none;
+    padding-left:12px;
+    padding-right:12px;
+}
+
+.wrapper2 > #header > #nextmatch
+{
+	display:none;
+}
+
+/* footer */
+#wrapper1 > #footerContainer
+{
+	background-color:#eeeeee;
+	background-image:url('/static/images/common/backFooterTop.gif');
+	background-position:center top;
+	background-repeat:no-repeat;	
+}
+
+.wrapper2 > #footer > #sponzori
+{
+	padding-top:28px;
+	padding-bottom:10px;
+	border-bottom:1px solid #b04545;
+	display:block;
+	text-align:center;
+	overflow:hidden;
+}
+
+.wrapper2 > #footer > #sponzori img
+{
+	margin-left:23px;
+	margin-right:23px;
+}
+
+.wrapper2 > #footer > #sponzori .mali img
+{
+	margin-top:14px;
+	margin-left:12px;
+	margin-right:12px;
+}
+
+.wrapper2 > #footer > #sponzori .stPrvi img
+{
+/*	margin-left:0px;*/
+}
+
+.wrapper2 > #footer > #sponzori .stZadnji img
+{
+/*	margin-right:0px;*/
+}
+
+
+.wrapper2 > #footer > #linkovi
+{
+	background-color:#eeeeee;
+}
+
+.wrapper2 > #footer > #linkovi a
+{
+	color:#6d6e71;
+}
+
+.wrapper2 > #footer > #linkovi > ul > li.st1 a,
+.wrapper2 > #footer > #linkovi > ul > li.st2 a,
+.wrapper2 > #footer > #linkovi > ul > li.st3 a
+{
+	text-decoration:none;
+}
+
+.wrapper2 > #footer > #linkovi > ul > li.st1 a:hover,
+.wrapper2 > #footer > #linkovi > ul > li.st2 a:hover,
+.wrapper2 > #footer > #linkovi > ul > li.st3 a:hover
+{
+	text-decoration:underline;
+}
+
+.wrapper2 > #footer > #linkovi >  ul
+{
+	clear:both;
+	line-height:18px;
+}
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r2
+{
+	height:90px;
+	border-top:1px solid #d09d9d;
+	position:relative;
+}
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3
+{
+	padding-top:20px;
+	border-top:1px solid #d09d9d;
+/*	padding-left:10%;*/
+}
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 ul li
+{
+	float:left;
+	height:111px;
+	width:33.3%;
+	text-align:center;
+}
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 ul li:nth-child(1)
+{
+	border-right:1px solid #AEAEAE;
+}
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 ul li img
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 ul li:nth-child(2)
+{
+	border-right:1px solid #AEAEAE;
+}
+
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 ul li:nth-child(3)
+{
+	text-align:center;
+	height:135px;
+}
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 ul li:nth-child(3) img
+{
+	margin-top:45px;
+
+}
+
+/*.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 img
+{
+	vertical-align:top;
+	padding-right:25px;
+	padding-left:0px;
+}*/
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r1 > ul
+{
+	clear:both;
+	padding-top:16px;
+	padding-left:5%;
+}
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r1 > ul > li
+{
+	text-align:left;
+	color:#7c7c7c;
+	font-family:'Open Sans', Arial;
+	font-size:14px;
+	line-height:19px;
+}
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r2 > ul#social2
+{
+	position:absolute;
+	z-index:10;
+	clear:both;
+	overflow:hidden;
+	height:46px;
+}
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r2 > ul#social2 > li
+{
+	margin-bottom:7px;
+	float:left;
+	width:62px;
+}
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r2 > ul#social2 > li:last-child
+{
+	width:42px;
+}
+
+
+.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r2 > ul#social2 > li > img
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* srednji sadržaj sa stupcima */
+
+.wrapper2 > .classicContent > .col1
+{
+	width:30%;
+	float:left;
+}
+
+.wrapper2 > .classicContent.news
+{
+	margin-top:30px;
+	margin-bottom:40px;
+}
+
+.wrapper2 > .classicContent > .col2
+{
+	background-color:white;
+	float:right;
+	position:relative;
+	min-width:700px;
+	width:70%;
+/*	padding-bottom:40px;*/
+}
+
+.wrapper2 > .classicContent > .col1
+{
+	width:340px;
+	margin-top:0px;
+}
+
+@media screen and (max-width: 639px)
+{
+	#wrapper1,
+	.wrapper2
+	{
+		min-width:320px;
+	}
+
+	/* header */
+	.wrapper2 > #header > .col2 #nav
+	{
+		display:none;
+	}
+
+	.wrapper2 > #header
+	{
+		height:70px;
+	}
+
+	.wrapper2 > #header > .col1 img#logo
+	{
+		width:132px;
+		height:66px;
+	}
+
+
+	.wrapper2 > #header > .col2 > a#simple-menu
+	{
+		position:absolute;
+		top:15px;
+		right:10px;
+	}
+
+	.wrapper2 > #header > .col2 > a#simple-menu img
+	{
+		display:block;
+		width:40px;
+		height:40px;
+	}
+
+	/* footer */
+	.wrapper2 > #footer > #linkovi > ul > li.st1,
+	.wrapper2 > #footer > #linkovi > ul > li.st2,
+	.wrapper2 > #footer > #linkovi > ul > li.st3
+	{
+		display:none;
+	}
+
+	.wrapper2 > #footer > #sponzori
+	{
+		max-width:320px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	.wrapper2 > #footer > #sponzori img
+	{
+		margin-bottom:10px;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul
+	{
+		max-width:320px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r1
+	{
+		padding-bottom:5px;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 ul li
+	{
+		width:50%;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 ul li:nth-child(2)
+	{
+		border-right:none;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 ul li:nth-child(3)
+	{
+		width:100%;
+		height:115px;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 ul li:nth-child(3) img
+	{
+		margin-top:25px;
+	}
+	
+
+/*	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3
+	{
+		text-align:center;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 img + img
+	{
+		padding-left:20px;
+		border-left:1px solid #aeaeae;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 img.budiponosan
+	{
+		clear:both;
+		padding-left:0px;
+		border-left:0px none;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:35px;
+	}*/
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r1 > ul > li
+	{
+		margin-bottom:10px;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r2 > h2
+	{
+		display:none;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r2 > ul#social2
+	{
+		top:23px;
+		left:7px;
+	}
+
+	/* srednji sadržaj sa stupcima */
+	.wrapper2 > .classicContent.news > .col2
+	{
+		float:none;
+		position:relative;
+		margin-left:10px;
+		margin-right:10px;
+		min-width:inherit;
+		width:auto;
+		max-width:none;
+	}
+
+	.wrapper2 > .classicContent > .col1
+	{
+		margin-top:30px;
+	}
+}
+
+@media screen and (min-width: 640px) and (max-width: 959px)
+{
+	#wrapper1,
+	.wrapper2
+	{
+		min-width:640px;
+	}
+
+	/* header */
+	.wrapper2 > #header > .col2 #nav
+	{
+		display:none;
+	}
+
+	.wrapper2 > #header
+	{
+		height:140px;
+	}
+
+	.wrapper2 > #header > .col2 > a#simple-menu
+	{
+		position:absolute;
+		top:25px;
+		right:20px;
+	}
+
+	.wrapper2 > #header > .col2 > a#simple-menu img
+	{
+		display:block;
+		width:80px;
+		height:80px;
+	}
+
+	/* footer */
+
+	.wrapper2 > #footer > #linkovi > ul > li.st1,
+	.wrapper2 > #footer > #linkovi > ul > li.st2,
+	.wrapper2 > #footer > #linkovi > ul > li.st3
+	{
+		display:none;
+	}
+
+	.wrapper2 > #footer > #sponzori
+	{
+		line-height:40px;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul
+	{
+		max-width:525px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	.wrapper2 > #footer v> ul > li.st4 > ul
+	{
+		width:100%;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r1
+	{
+		height:110px;
+	}
+
+/*	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 img
+	{
+		border-right:1px solid #aeaeae;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 img + img
+	{
+		padding-left:25px;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 img + img + img
+	{
+		border-right:0px none;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 img.budiponosan
+	{
+		padding-right:0px;
+		margin-top:21px;
+	}*/
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r1 > ul > li
+	{
+		float:left;
+		width:45%;
+		padding-left:5%;
+		padding-right:0%;
+		white-space:nowrap;
+
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r1 > ul > li + li
+	{
+		width:50%;
+		padding-left:0px;
+		white-space:nowrap;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r2 > h2
+	{
+		font-family:MuseoSlab700;
+		color:#626262;
+		position:absolute;
+		top:32px;
+		left:50px;
+		text-transform:uppercase;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r2 > ul#social2
+	{
+		top:20px;
+		left:200px;
+	}
+
+	/* srednji sadržaj sa stupcima */
+	.wrapper2 > .classicContent.news > .col2
+	{
+		float:none;
+		position:relative;
+		margin-left:20px;
+		margin-right:20px;
+		min-width:inherit;
+		width:auto;
+		max-width:none;
+	}
+
+
+	.wrapper2 > .classicContent.news > .col1
+	{
+		width:auto;
+		float:none;
+		margin-top:40px;
+	}
+
+	.wrapper2 > .classicContent.news > .col1 .backKosi1,
+	.wrapper2 > .classicContent > .col1 .backKosi2
+	{
+		margin-left:15px !important;
+		float:left;
+	}
+}
+
+@media screen and (min-width: 960px)
+{
+	a#simple-menu
+	{
+		display:none;
+	}
+
+	.sidr
+	{
+		display:none !important;
+	}
+
+	#wrapper1,
+	.wrapper2
+	{
+		min-width:1010px;
+	}
+
+	.wrapper2
+	{
+		max-width:1160px;
+	}
+
+	/* header i navigacija */
+	.wrapper2 > #header
+	{
+/*		overflow:hidden;*/
+		z-index:5000;
+	}
+
+	.wrapper2 > #header > #nextmatch
+	{
+		display:block;
+		position:absolute;
+		right:320px;
+		white-space:nowrap;
+		top:0px;
+		font-family:MuseoSlab700;
+		font-size:12px;
+		text-align:center;
+		padding-top:3px;
+		padding-left:34px;
+		padding-right:4px;
+		background-image:url('/static/images/common/backToolbar3.gif');
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+		line-height:13px;
+	}
+
+	.wrapper2 > #header > #nextmatch h3
+	{
+		color:#960000;
+		text-transform:uppercase;
+	}
+
+	.wrapper2 > #header > #nextmatch h4
+	{
+		color:#808080;
+	}
+
+	.wrapper2 > #header > #toolbar
+	{
+		width:320px;
+/*		width:120px;*/
+		height:28px;
+		position:absolute;
+		background-image:url('/static/images/common/toolbar2.gif');
+		background-position:right 0px;
+		top:0px;
+		right:0px;
+		display:block;
+		background-repeat:no-repeat;
+	}
+
+	.wrapper2 > #header > #toolbar #arhivaInputTop
+	{
+		width:120px;
+		font-size:10px;
+		font-family:'Open Sans', Arial;
+		color:#666666;
+		padding:2px;
+		margin-top:4px;
+		text-align:center;
+		border:0px none;
+		margin-left:29px;
+	}
+		
+	.wrapper2 > #header > #toolbar a
+	{
+		display:block;
+		position:absolute;
+		top:0px;
+		width:40px;
+		height:28px;
+	}
+
+	.wrapper2 > #header > #toolbar a.search
+	{
+		right:110px;
+	}
+
+	.wrapper2 > #header > #toolbar a.hrvatski
+	{
+		right:65px;
+/*		left:10px;*/
+	}
+
+	.wrapper2 > #header > #toolbar a.english
+	{
+		right:20px;
+/*		left:55px;*/
+	}
+
+	.wrapper2 > #header > .col1
+	{
+		float:left;
+	}
+
+	.wrapper2 > #header > .col2
+	{
+		width:735px;
+		float:right;
+/*		text-align:right;*/
+	}
+
+	.wrapper2 > #header > .col1 img#logo
+	{
+		margin-left:11px;
+		display:block;
+	}
+
+	.wrapper2 > #header > .col2 #nav
+	{
+		font-family:'letroregularregular', 'MuseoSlab700';
+		font-size:15px;
+		margin-top:40px;
+/*		height:30px;*/
+		margin-right:0px;
+		margin-left:auto;
+/*		overflow:hidden;*/
+		float:left;
+		z-index:5000;
+		height:40px;
+	}
+
+	.wrapper2 > #header > .col2 #nav > li
+	{
+/*		margin-left:8px;*/
+		margin-right:13px;
+		float:left;
+		height:30px;
+		line-height:30px;
+		text-indent:13px;
+		position:relative;
+	}
+
+	.wrapper2 > #header > .col2 #nav > li.last
+	{
+		margin-right:5px;
+	}
+
+	.wrapper2 > #header > .col2 #nav > li > a,
+	.wrapper2 > #header > .col2 #nav > li > span.nolink
+	{
+		cursor:pointer;
+		color:#626262;
+		text-decoration:none;
+		position:relative;
+		z-index:100;
+	}
+
+	.wrapper2 > #header > .col2 #nav > a:hover
+	{
+		color:#960000;
+		border-bottom:4px solid #960000;
+	}
+
+	.wrapper2 > #header > .col2 #nav > li .backWhite
+	{
+		position:absolute;
+		top:0px;
+		width:100%;
+		height:30px;
+		background-color:white;
+	}
+
+	.wrapper2 > #header > .col2 #nav > li .navItem
+	{
+		display:none;
+		background-color:white;
+		color:#808080;
+		z-index:6000;
+		-webkit-box-shadow: 2px 9px 10px 3px rgba(0,0,0,0.30);
+		-moz-box-shadow: 2px 9px 10px 3px rgba(0,0,0,0.30);
+		box-shadow: 2px 9px 10px 3px rgba(0,0,0,0.30);
+	}
+
+
+	.wrapper2 > #header > .col2 #nav .navItem > ul
+	{
+	}
+
+	.wrapper2 > #header > .col2 #nav .navItem > ul > li
+	{
+		text-indent:0px;
+		border-top:1px solid #efefef;
+		border-bottom:1px solid #f8f8f8;
+	}
+
+	.wrapper2 > #header > .col2 #nav .navItem > ul > li > ul
+	{
+		text-indent:14px;
+	}
+
+	.wrapper2 > #header > .col2 #nav .navItem > ul > li > ul > li
+	{
+		border-top:0px none;
+		border-bottom:0px none;
+	}
+
+	.wrapper2 > #header > .col2 #nav .navItem > ul > li > ul > li a
+	{
+		height:26px;
+		line-height:26px;
+		font-size:13px;
+	}
+
+	.wrapper2 > #header > .col2 #nav .navItem > ul > li > ul > li.last a
+	{
+		margin-bottom:4px;
+	}
+
+	.wrapper2 > #header > .col2 #nav .navItem > ul > li > ul a
+	{
+		border-top:0px none;
+		border-bottom:0px none;
+	}
+
+	.wrapper2 > #header > .col2 #nav .navItem > ul > li a
+	{
+	}
+
+	.wrapper2 > #header > .col2 #nav .navItem > ul > li.last
+	{
+		border-bottom:0px none;
+	}
+
+	.wrapper2 > #header > .col2 #nav > li:hover
+	{
+		-webkit-box-shadow: 2px 3px 10px 3px rgba(0,0,0,0.30);
+		-moz-box-shadow: 2px 3px 10px 3px rgba(0,0,0,0.30);
+		box-shadow: 2px 3px 10px 3px rgba(0,0,0,0.30);
+	}
+
+	.wrapper2 > #header > .col2 #nav > li:hover .navItem
+	{
+		display:block;
+	}
+
+	.wrapper2 > #header > .col2 #nav > li .navItem a
+	{
+		color:#808080;
+		text-decoration:none;
+		display:block;
+		line-height:37px;
+		height:37px;
+		padding-left:14px;
+	}
+
+	.wrapper2 > #header > .col2 #nav > li .navItem a:hover
+	{
+		background-color:#960000;
+		color:white;
+	}
+	
+	
+	/* footer */
+
+	.wrapper2 > #footer > #sponzori
+	{
+		padding-bottom:30px;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st1,
+	.wrapper2 > #footer > #linkovi > ul > li.st2,
+	.wrapper2 > #footer > #linkovi > ul > li.st3
+	{
+		padding-left:5px;
+		width:17%;
+		font-family:'Open Sans', Arial;
+		font-size:13px;
+		color:#6d6e71;
+		float:left;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li > h2
+	{
+		color:#626262;
+		font-family:MuseoSlab700;
+		font-size:13px;
+		text-transform:uppercase;
+		margin-top:15px;
+		margin-bottom:3px;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4
+	{
+		float:right;
+		width:45%;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r2
+	{
+		height: 82px;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 img
+	{
+/*		padding-right: 4%;
+		border-right:1px solid #aeaeae;*/
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 img + img
+	{
+/*		padding-left: 4%;*/
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r3 img.budiponosan
+	{
+/*		padding-right:0px;
+		margin-top:35px;
+		border-right:0px none;*/
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r2 > h2
+	{
+		font-family:MuseoSlab700;
+		color:#626262;
+		position:absolute;
+		top: 30px;
+		left:10%;
+		text-transform:uppercase;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r1
+	{
+		height:110px;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r1 > ul > li
+	{
+		float:left;
+		width:45%;
+		padding-left:5%;
+		padding-right:0%;
+		white-space:nowrap;
+	}
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r1 > ul > li + li
+	{
+		width:50%;
+		padding-left:0px;
+		white-space:nowrap;
+	}
+
+
+	.wrapper2 > #footer > #linkovi > ul > li.st4 > ul > li.r2 > ul#social2
+	{
+		top: 18px;
+		left: 180px;
+	}
+
+	.wrapper2 > .classicContent.news > .col2
+	{
+		float:right;
+		position:relative;
+		margin-right:77px;
+		min-width:inherit;
+		max-width:685px;
+	}
+}
+
+@media screen and (min-width: 960px) and (max-width:1118px)
+{
+	/* ovo je samo za 1024 rezolucije */
+
+	.wrapper2 > .classicContent.news > .col1
+	{
+		width:350px;
+	}
+
+	.wrapper2 > .classicContent.news > .col2
+	{
+		float:right;
+		position:relative;
+		margin-right:5px;
+		min-width:inherit;
+		max-width:645px;
+	}
+
+    .wrapper2 > #header > .col2 #nav > li
+    {
+        text-indent:10px;
+        margin-right:10px;
+    }
+}
+
+@media screen and (min-width: 1118px)
+{
+	.wrapper2 > .classicContent > .col1
+	{
+		width:32.5%;
+	}
+
+	.wrapper2 > .classicContent > .col2
+	{
+		width:67.5%;
+	}
+
+	.wrapper2 > #header > .col2
+	{
+		width:760px;
+	}
+
+	.wrapper2 > #header > .col2 > ul#nav
+	{
+		float:none;
+	}
+
+	.wrapper2 > #header > .col2 > ul#nav > li
+	{
+/*		margin-left:13px;
+		margin-right:17px;*/
+	}
+}
+
+div.fancyDropDownContainer
+{
+/*	height:57px;
+	padding-left:8px;*/
+	margin-left:8px;
+}
+
+
+div.linkRight275
+{
+	display:block;
+	width:251px;
+	height:33px;
+	background-image:url('/static/images/common/backLinkRight275noshadow.png');
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+	position:relative;
+	margin-left:8px;
+	margin-top:8px;
+
+	margin-bottom:14px;
+
+	-webkit-box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.75);
+	box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.75);
+}
+
+div.linkRight275 a
+{
+	display:block;
+	width:250px;
+	height:33px;
+	font-family:MuseoSlab700;
+	font-size:13px;
+	text-transform:uppercase;
+	color:#b4b4b4;
+	text-decoration:none;
+	text-indent:12px;
+	line-height:33px;
+	position:absolute;
+}
+
+
+div.linkRight120
+{
+	display:block;
+	width:120px;
+	height:33px;
+	background-image:url('/static/images/common/backLinkRight120noshadow.png');
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+	position:relative;
+	margin-left:8px;
+	margin-top:8px;
+
+	margin-bottom:14px;
+
+	-webkit-box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.75);
+	box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.75);
+}
+
+div.linkRight120 a
+{
+	display:block;
+	width:95px;
+	height:33px;
+	font-family:MuseoSlab700;
+	font-size:13px;
+	text-transform:uppercase;
+	color:#b4b4b4;
+	text-decoration:none;
+	text-indent:12px;
+	line-height:33px;
+	position:absolute;
+}
+
+
+div.linkDown275
+{
+	display:block;
+	width:275px;
+	height:57px;
+	background-image:url('/static/images/common/backLinkDown275.png');
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+	position:relative;
+}
+
+div.linkDown275 a
+{
+	display:block;
+	width:250px;
+	height:32px;
+	font-family:MuseoSlab700;
+	font-size:13px;
+	text-transform:uppercase;
+	color:#b4b4b4;
+	text-decoration:none;
+	text-indent:12px;
+	line-height:32px;
+	position:absolute;
+	top:8px;
+	left:8px;
+}
+
+
+div.linkDown355
+{
+	display:block;
+	width:355px;
+	height:57px;
+	background-image:url('/static/images/common/backLinkDown355.png');
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+	position:relative;
+}
+
+div.linkDown355 a
+{
+	display:block;
+	width:330px;
+	height:32px;
+	font-family:MuseoSlab700;
+	font-size:13px;
+	text-transform:uppercase;
+	color:#b4b4b4;
+	text-decoration:none;
+	text-indent:12px;
+	line-height:32px;
+	position:absolute;
+	top:8px;
+	left:8px;
+}
+
+.wrapper2 .backKosi1
+{
+	background-image:url('/static/images/common/backKosi1.png');
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+	padding-top:10px;
+}
+
+.wrapper2 .backKosi2
+{
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+	overflow:hidden;
+	padding-left:90px;
+	left:-20px;
+	width:360px;
+	margin-bottom:40px;
+	min-height:100px;
+}
+
+.wrapper2 .backKosi2 > h2 {
+    color: #7D7D7D;
+    font-family: MuseoSlab500;
+    font-size: 13px;
+    height: 15px;
+    line-height: 13px;
+    margin-bottom: 9px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.wrapper2 .backKosi2 h3 {
+    color: #960000;
+    font-family: MuseoSlab700;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 2px;
+    text-transform: uppercase;
+}
+
+.wrapper2 .backKosi2 h4 {
+    color: #6D6E71;
+    font-family: MuseoSlab700;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 2px;
+}
+
+.wrapper2 .backKosi2 h5 {
+    color: #6D6E71;
+    font-family: 'Open Sans', Arial;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 13px;
+    text-transform: uppercase;
+}
+
+.wrapper2 .backKosi2 div.linkRight275
+{
+	margin-left:0px;
+/*	margin-left:-10px;*/
+}
+
+.wrapper2 .backKosi2.ulaznice
+{
+	background-image:url('/static/images/common/backKosiEmpty.gif');
+}
+
+.wrapper2 .backKosi2.ulaznice img
+{
+	width:270px;
+}
+
+
+.wrapper2 .backKosi2.sljedeca
+{
+	background-image:url('/static/images/common/backKosiSljedeca.gif');
+}
+
+.wrapper2 .backKosi2.documents
+{
+	background-image:url('/static/images/common/backKosiDokumenti.gif');
+}
+
+.wrapper2 .backKosi2.dres
+{
+	background-image:url('/static/images/common/backKosiDres2.gif');
+}
+
+.wrapper2 .backKosi2.ljestvica
+{
+	background-image:url('/static/images/common/backKosiLjestvica.gif');
+}
+
+.wrapper2 .backKosi2.documents > h2,
+.wrapper2 .backKosi2.ljestvica > h2,
+.wrapper2 .backKosi2.dres > h2
+{
+    color: #960000;
+    font-family: MuseoSlab700;
+    font-size: 17px;
+    margin-left: 0;
+	margin-top:15px;
+}
+
+.wrapper2 .backKosi2.documents ul li 
+{
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.wrapper2 .backKosi2.documents ul li+li
+{
+    border-top: 1px solid #CCCCCC;
+    padding-top: 4px;
+}
+
+.wrapper2 .backKosi2.documents ul li h2 {
+    color: #960000;
+    font-family: MuseoSlab700;
+    font-size: 17px;
+    margin-left: 0;
+    height: auto;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+.wrapper2 .backKosi2.documents ul li h3 {
+    color: #919191;
+    font-family: Arial;
+    font-size: 12px;
+	line-height:16px;
+	margin-bottom:2px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.wrapper2 .backKosi2.documents ul li h2 a {
+    color: #960000;
+    font-family: MuseoSlab500;
+    text-decoration: none;
+}
+
+.wrapper2 .backKosi2.documents ul li h2 a:hover
+{
+	text-decoration:underline;
+}
+
+.wrapper2 .backKosi2.mininav ul li
+{
+	font-size:13px;
+	color:#960000;
+	line-height:22px;
+	height:22px;
+	font-family: "Open Sans",Arial;
+    line-height: 22px;
+	text-indent:20px;
+}
+
+.wrapper2 .backKosi2.mininav ul li.active
+{
+	background-image:url('/static/images/common/arrowRightRed2.gif');
+	background-repeat:no-repeat;
+	background-position:1px 5px;
+}
+
+.wrapper2 .backKosi2.mininav ul li a
+{
+	color:#6d6e71;
+	text-decoration:none;
+}
+
+.wrapper2 .backKosi2.mininav ul li.active a
+{
+	color:#960000;
+}
+
+
+.wrapper2 .backKosi2.mininav ul li a:hover
+{
+	text-decoration:underline;
+	color:#960000;
+}
+
+table.col1Ljestvica
+{
+	width:250px;
+}
+
+table.col1Ljestvica td
+{
+	padding:1px;
+	font-family:'Open Sans', Arial;
+	font-size:14px;
+	color:#6d6e71;
+	line-height:20px;
+}
+
+table.col1Ljestvica tr.active td:nth-child(0n+1),
+table.col1Ljestvica tr.active td:nth-child(0n+2)
+{
+	font-weight:bold;
+	color:#960000;	
+}
+
+table.col1Ljestvica tr td:nth-child(0n+5)
+{
+	font-weight:bold;
+}
+
+table.col1Ljestvica td:nth-child(1n+3)
+{
+	text-align:right;
+}
+
+.wrapper2 .text img
+{
+    max-width:100% !important;
+    height:auto !important;  
+}
+
+.wrapper2 .text .table1 img
+{
+    max-width:none !important;
+}
+
+table.table1
+{
+	width:100%;
+	border-top: 20px solid #DFDFDF;
+	border-collapse:separate;
+}
+
+table.table1 tr th
+{
+    background-color: #DFDFDF;
+    border-bottom: 10px solid #DFDFDF;
+    color: #6E6E6E;
+    font-family: "MuseoSlab700",Arial;
+    font-size: 14px;
+    height: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
+	text-align:center;
+	vertical-align:middle;
+}
+
+table.table1 tr td
+{
+	border-top:1px solid white;
+	border-bottom:1px solid white;
+	text-align:center;
+	background-color:#f7f7f7;
+	height:36px;
+	vertical-align:middle;
+}
+
+table.table1 tr th:nth-child(n+2)
+{
+    border-left: 1px solid #B4B4B4;
+}
+
+table.table1.pobjednici tr td:nth-child(2)
+{
+	font-weight:bold;
+}
+
+.poredak table.table1 tr th:nth-child(2)
+{
+    text-align:left;
+}
+
+.poredak table.table1 tr td:nth-child(2)
+{
+    font-weight:bold;
+    text-align:left;
+    color:#960000;
+    padding-left:15px;
+    min-width:180px;
+    white-space:nowrap;
+}
+
+table.table1.raspored
+{
+	border-top:0px none;
+}
+
+table.table1.raspored th
+{
+	padding-left:15px;
+	padding-right:0px;
+	text-align:left;
+	height:42px;
+	line-height:42px;
+	border-bottom:0px none;
+	text-transform:uppercase;
+}
+
+table.table1.raspored td
+{
+	border-top:0px none;
+	border-bottom:0px none;
+    line-height:16px;
+}
+
+table.table1.raspored tr:nth-child(2n+1) td
+{
+	background-color:white;
+}
+
+table.table1.raspored td:nth-child(3),
+table.table1.raspored td:nth-child(4),
+table.table1.raspored td:nth-child(5)
+{
+	color:#960000;
+	font-weight:bold;
+}
+
+table.table1.raspored td:nth-child(2),
+table.table1.raspored td:nth-child(6)
+{
+	color:#6e6e6e;
+	font-weight:bold;
+}
+
+table.table1.raspored td:nth-child(1)
+{
+	text-align:left;
+	padding-left:15px;
+	width:28%;
+	white-space:nowrap;
+    line-height: 17px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+  max-width:100px;
+}
+
+table.table1.raspored td:nth-child(1) div.mjesto
+{
+    font-size:12px;
+    text-transform:uppercase;
+}
+
+table.table1.raspored td:nth-child(1) div.natjecanje
+{
+    font-size:12px;
+    text-transform:uppercase;
+}
+
+table.table1.raspored.strijelci td:nth-child(1)
+{
+    white-space:normal;
+}
+
+
+table.table1.raspored td:nth-child(3),
+table.table1.raspored td:nth-child(5)
+{
+	text-align:center;
+	width:2%;
+}
+
+table.table1.raspored td:nth-child(4)
+{
+	text-align:center;
+	width:1%;
+}
+
+table.table1.raspored td:nth-child(2),
+table.table1.raspored td:nth-child(6)
+{
+	width:28%;
+}
+
+table.table1.raspored td:nth-child(2)
+{
+	text-align:right;
+	padding-right:1%;
+}
+
+table.table1.raspored td:nth-child(6)
+{
+	padding-left:1%;
+	text-align:left;
+}
+
+table.table1.raspored td:nth-child(7)
+{
+	vertical-align:middle;
+	text-align:center;
+	padding-left:35px;
+	padding-right:35px;
+}
+
+table.table1.raspored td:nth-child(7) img
+{
+	display:block;
+    width:11px;
+    height:15px;
+}
+
+
+table.table1.raspored th .izvjestaj
+{
+	float:right;
+	width:80px;
+	text-align:center;
+	border-left:1px solid #b4b4b4;
+	text-transform:none;
+	margin-top:5px;
+	height:32px;
+	line-height:32px;
+}
+
+
+.paging
+{
+	background-color:#eeeeee;
+	font-size:16px;
+	font-family:MuseoSlab700;
+	color:#6a6a6a;
+	text-align:center;
+	height:32px;
+	line-height:32px;
+	border-top:1px solid #b5b5b5;
+}
+
+.paging a,
+.paging span.selectedPage,
+.paging span.delimiter
+{
+	color:#6a6a6a !important;
+	text-decoration:none;
+	display:inline-block;
+	width:20px;
+	text-align:center;
+}
+
+.paging span.delimiter
+{
+	width:30px;
+}
+
+.paging a:hover,
+.paging span.selectedPage
+{
+	color:#960000 !important;
+}
+
+table.table1.raspored.strijelci td
+{
+	display:table-cell !important;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:15px;
+	text-align:justify;
+}
+
+@media screen and (max-width: 639px)
+{
+    .wrapper2 .backKosi1
+    {
+        background-image: url('/static/images/common/backKosi1long.png');
+    }
+
+    table.table1.raspored td:nth-child(1)
+    {
+        font-size: 14px;
+    }
+
+    table.table1.raspored td:nth-child(2),
+    table.table1.raspored td:nth-child(3),
+    table.table1.raspored td:nth-child(4),
+    table.table1.raspored td:nth-child(5),
+    table.table1.raspored td:nth-child(6)
+    {
+        font-size:13px;
+    }
+
+	table.table1.raspored td:nth-child(2),
+	table.table1.raspored td:nth-child(6)
+	{
+		width:45%;
+	}
+
+    .poredak table.table1 tr th:nth-child(4),
+    .poredak table.table1 tr td:nth-child(4),
+    .poredak table.table1 tr th:nth-child(5),
+    .poredak table.table1 tr td:nth-child(5),
+    .poredak table.table1 tr th:nth-child(6),
+    .poredak table.table1 tr td:nth-child(6)
+    {
+        display:none;
+    }   
+}
+
+@media screen and (max-width: 400px)
+{
+	table.table1.raspored td:nth-child(1)
+	{
+		display:none;
+	}
+}
+
+@media screen and (max-width: 480px)
+{
+	table.table1.raspored td:nth-child(1)
+	{
+		display:none;
+	}
+
+    .poredak table.table1 tr th:nth-child(7),
+    .poredak table.table1 tr td:nth-child(7),
+    .poredak table.table1 tr th:nth-child(8),
+    .poredak table.table1 tr td:nth-child(8)
+    {
+        display:none;
+    }
+
+    .poredak table.table1 tr td:nth-child(2)
+    {
+        min-width:120px;
+        padding-right:15px;
+    }
+}
+
+@CHARSET "UTF-8";
+.sbHolder{
+	border: 0px none;
+	font-family:MuseoSlab700, Arial;
+	font-size:13px;
+	font-weight: normal;
+	height: 33px;
+	position: relative;
+	width: 251px;
+
+	text-transform:uppercase;
+	color:#b4b4b4;
+
+	background-image:url('/static/images/common/backLinkDown275noshadow.png');
+
+	-webkit-box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.75);
+	box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.75);
+}
+
+.sbSelector{
+	display: block;
+	height: 33px;
+	left: 0;
+	line-height: 33px;
+	outline: none;
+	position: absolute;
+	text-indent: 12px;
+	top: 0;
+	width: 251px;
+}
+
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover{
+	color:#b4b4b4;
+	outline: none;
+	text-decoration: none;
+}
+
+.sbToggle{
+/*	background: url(select-icons.png) 0 -116px no-repeat;*/
+	display: block;
+	height: 33px;
+	outline: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 33px;
+}
+
+.sbOptions
+{
+	background-color: black;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 33px;
+	width: 251px;
+	z-index: 30;
+	overflow-y: auto !important;
+/*	max-height:340px !important;*/
+}
+.sbOptions li{
+	padding: 0px;
+	font-family:'Open Sans', Arial;
+	font-size:14px;
+	color:#b4b4b4;
+}
+.sbOptions a{
+	display: block;
+	outline: none;
+	padding: 7px 0 7px 14px;
+	color:#b4b4b4;
+	text-decoration:none;
+	text-transform:none;
+}
+
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus{
+	color: white;
+	background-image: url("/static/images/common/backDropDown251item.gif")
+
+}
+
+/* glavna vijest */
+.wrapper2 #news1title > #news1titleback
+{
+	display:none;
+}
+
+.cookieEU
+{
+	min-height:60px;
+	background-color:#ababab;
+	background-image:url('/static/images/common/backGrayGrad60.gif');
+	background-repeat:repeat-x;
+	background-position:center bottom;
+	padding-top:12px;
+	padding-bottom:13px;
+	line-height:35px;
+	font-family: 'Open Sans',Arial;
+	text-align:center;
+	font-size:14px;
+	color:white;
+}
+
+.cookieEU a
+{
+	color:white;
+}
+
+.cookieEU .hrefCookieAgree
+{
+	display:inline-block;
+	background-color:#960000;
+	font-weight:bold;
+	width:104px;
+	height:35px;
+	line-height:35px;
+	text-transform:uppercase;
+	text-transform:uppercase;
+	text-decoration:none;
+	margin-left:10px;
+}
+
+#wrapper1 > #back1
+{
+	z-index:0;
+	position:absolute;
+	width:100%;
+	top:143px;
+	height:375px;
+	background-image:url('/static/images/home/backNews_x3.jpg');
+	background-position:center 0px;
+	background-repeat:no-repeat;
+}
+
+#wrapper1 > #back2
+{
+	z-index:0;
+	position:absolute;
+	width:100%;
+	top:143px;
+	height:375px;
+	background-image:url('/static/images/home/backGeneric_x3.jpg');
+	background-position:center 0px;
+	background-repeat:no-repeat;
+}
+
+.wrapper2 #news1 h6
+{
+	display:inline-block;
+	padding:4px;
+	padding-left:8px;
+	padding-right:9px;
+	color:white;
+	background-color:black;
+	font-family:"Open Sans", Arial;
+	font-size:12px;
+	font-style:italic;
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:100;
+}
+
+.wrapper2 > #news1 > #news1title h2
+{
+	line-height:30px;
+	color:white;
+	font-size: 30px;
+	line-height:34px;
+	font-family: MuseoSlab900;
+	font-weight: normal;
+	text-transform:uppercase;
+	font-style:normal;
+	max-width:550px;
+}
+
+.wrapper2 > #news1 > #news1title h2 a
+{
+	text-decoration:none;
+	color:white;
+}
+
+.wrapper2 > #news1 > #news1title h2 b
+{
+	font-weight:normal;
+	padding:2px 5px 0px 5px;
+	height:34px;
+	background-color:black;
+	overflow:hidden;
+}
+
+.wrapper2 > #news1 > #news1title h2 b + b
+{
+
+}
+
+.wrapper2 > #news1 > #news1title h3
+{
+	display:inline-block;
+	color:white;
+	background-color:black;
+	font-family:'Arial';
+	font-weight:bold;
+	font-size:19px;
+	line-height:30px;
+	padding-left:5px;
+	padding-right:5px;
+	text-transform:uppercase;
+/*	margin-left:25px;*/
+}
+
+.wrapper2 > #news1 > #news1title a.more
+{
+	display:inline-block;
+	color:white;
+	background-color:#960000;
+	text-decoration:none;
+	font-family:'Arial';
+	font-weight:bold;
+	font-size:14px;
+	line-height:25px;
+	height:25px;
+	text-transform:uppercase;
+	padding-left:5px;
+	padding-right:5px;
+	width:104px;
+}
+
+.wrapper2 > #news1.class2 > #news1title
+{
+	position:absolute;
+	z-index:500;
+}
+
+.wrapper2 > div.homepage > .col1 > #sljedecaUtakmica,
+.wrapper2 > div.homepage > .col1 > #prethodnaUtakmica,
+.wrapper2 > div.homepage > .col1 > #mojHNS,
+.wrapper2 > div.homepage > .col1 > #ulaznice
+{
+	height:185px;
+	padding-left:40px;
+}
+
+.wrapper2 > div.homepage > .col1 > #ulaznice
+{
+	height:300px;
+}
+
+.wrapper2 > div.classicContent.news.homepage > .col1 > #sljedecaUtakmica,
+.wrapper2 > div.classicContent.news.homepage > .col1 > #prethodnaUtakmica,
+.wrapper2 > div.classicContent.news.homepage > .col1 > #mojHNS,
+.wrapper2 > div.classicContent.news.homepage > .col1 > #ulaznice
+{
+	margin-left:10px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1 h2,
+.wrapper2 > div > .col1 > .backKosi1 h3,
+.wrapper2 > div > .col1 > .backKosi1 h4,
+.wrapper2 > div > .col1 > .backKosi1 h5
+{
+	margin-left:10px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1 h2
+{
+	font-family:MuseoSlab500;
+	font-size:13px;
+	line-height:13px;
+	color:#7d7d7d;
+	text-transform:uppercase;
+	height:15px;
+	margin-bottom:9px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1.uvuceno
+{
+	background-image:url('/static/images/common/backKosi1long2.png');
+	padding-left:45px;
+	min-height:80px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1.uvuceno h2,
+.wrapper2 > div > .col1 > .backKosi1.uvuceno h3,
+.wrapper2 > div > .col1 > .backKosi1.uvuceno h4
+{
+	margin-left:0px;
+}
+
+
+.wrapper2 > div > .col1 > .backKosi1.class2 h2,
+.wrapper2 > div > .col1 > .backKosi1.class3 h2
+{
+	font-family:MuseoSlab700;
+	color:#960000;
+	font-size:17px;
+	margin-left:0px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1.class3
+{
+	margin-bottom:30px;
+	margin-left:5px;
+}
+
+.wrapper2 .backKosi1.class3 ul li h3
+{
+	color: #919191;
+    font-family: Arial;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.wrapper2 .backKosi1.class3 ul li
+{
+	overflow:hidden;
+	padding-bottom:10px;
+}
+
+.wrapper2 .backKosi1.class3 ul li + li
+{
+	border-top:1px solid #cccccc;
+	padding-top:4px;
+}
+
+
+.wrapper2 .backKosi1.class3 ul li h2
+{
+	font-family:MuseoSlab500;
+	font-size:17px;
+	text-transform:none;
+	color:#960000;
+	line-height:20px;
+	margin-top:0px;
+	margin-bottom:0px;
+	height:auto;
+}
+
+.wrapper2 .backKosi1.class3 ul li h2 a
+{
+	font-family:MuseoSlab500;
+	text-decoration:none;
+	color:#960000;
+}
+
+.wrapper2 .backKosi1.class3 ul li h2:hover
+{
+	text-decoration:underline;
+}
+
+
+
+
+.wrapper2 > div > .col1 > .backKosi1 h3
+{
+	font-family:MuseoSlab700;
+	font-size:20px;
+	text-transform:uppercase;
+	color:#960000;
+	line-height:20px;
+	margin-top:2px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1 h4
+{
+	font-family:MuseoSlab700;
+	font-size:20px;
+	color:#6d6e71;
+	line-height:20px;
+	margin-top:2px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1 h5
+{
+	font-family:'Open Sans', Arial;
+	font-size:14px;
+	color:#6d6e71;
+	text-transform:uppercase;
+	line-height:14px;
+	margin-top:13px;
+}
+
+.wrapper2 .page ul.documentlist
+{
+	clear:both;
+}
+
+.wrapper2 .page ul.documentlist.collapsed
+{
+    display:none;
+}
+
+.wrapper2 .page .cmbOdabirDokumenata h2
+{
+	color: #494949;
+    font-family: MuseoSlab700;
+    font-size: 17px;
+	padding-top:14px;
+    margin-bottom:6px;
+}
+
+.wrapper2 .page .cmbOdabirDokumenata h2 a{
+	color: #494949;
+    text-decoration:none;
+    border-bottom:1px dotted #494949;
+}
+
+.wrapper2 .page .cmbOdabirDokumenata h2 a:hover
+{
+    border-bottom:1px solid #494949;
+}
+
+
+
+.wrapper2 .page ul.documentlist li h4
+{
+	color: #919191;
+	font-family: Arial;
+	font-size: 12px;
+	font-style: italic;
+	float:left;
+	line-height:24px;
+	margin-right:8px;
+}
+
+.wrapper2 .page ul.documentlist li h3
+{
+    color: #960000;
+    font-family: MuseoSlab700;
+    font-size: 17px;
+	line-height:20px;
+}
+
+.wrapper2 .page ul.documentlist li h3 a
+{
+	color: #960000;
+	font-family: MuseoSlab500;
+	text-decoration: none;
+}
+
+.wrapper2 .page ul.documentlist li h3 a:hover
+{
+	text-decoration:underline;
+}
+
+
+.wrapper2 .page ul.documentlist li
+{
+	clear:both;
+	overflow:hidden;
+	margin-bottom:15px;
+}
+
+.wrapper2 ul.newslist
+{
+	clear:both;
+}
+
+.wrapper2 ul.newslist li
+{
+	clear:both;
+	max-height:120px;
+	overflow:hidden;
+	margin-bottom:30px;
+}
+
+.wrapper2 ul.newslist li > .image
+{
+	width:160px;
+	height:120px;
+	background-color:#d8d8d8;
+	float:left;
+	margin-right:10px;
+}
+
+.wrapper2 ul.newslist li > .image img
+{
+	width:160px;
+	height:120px;
+	display:block;
+}
+
+.wrapper2 ul.newslist li h3
+{
+	color:#919191;
+	font-size:12px;
+	font-family:Arial;
+	font-style:italic;
+}
+
+.wrapper2 ul.newslist li h2,
+.wrapper2 ul.newslist li h2 a
+{
+	color:#960000;
+	font-size:17px;
+	font-family:MuseoSlab700;
+	text-decoration:none;
+	line-height:23px;
+	margin-bottom:4px;
+	margin-top:2px;
+}
+
+.wrapper2 ul.newslist li h2 a:hover
+{
+	text-decoration:underline;
+}
+
+
+.wrapper2 ul.newslist li p
+{
+	color:#5e5e5e;
+	font-size:13px;
+	line-height:19px;
+	font-family:'Open Sans', Arial;
+}
+
+.wrapper2 ul.archivelist
+{
+	clear:both;
+    margin-bottom:25px;
+}
+
+.wrapper2 ul.archivelist li
+{
+	clear:both;
+	overflow:hidden;
+	margin-bottom:12px;
+}
+
+.wrapper2 ul.archivelist li+li
+{
+    padding-top:12px;
+    border-top:1px dotted #5e5e5e;
+}
+
+
+.wrapper2 ul.archivelist li h3
+{
+    color: #960000;
+    font-family: MuseoSlab700;
+    font-size: 17px;
+    line-height: 23px;
+    margin-bottom: 4px;
+    margin-top: 2px;
+}
+
+.wrapper2 ul.archivelist li h3 a
+{
+    color: #960000;
+    text-decoration:underline;
+}
+
+.wrapper2 ul.archivelist li h3 a:hover
+{
+    text-decoration:underline;
+}
+
+.wrapper2 ul.archivelist li h4
+{  
+    display:inline-block;
+    margin-right:15px;
+    color: #5E5E5E;
+    font-family: 'Open Sans',Arial;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+input#arhivaInput
+{
+    padding:5px;
+    border:1px solid #ACACAC;
+    width:300px;
+    margin-bottom:10px;
+}
+
+.wrapper2 ul.archivelist p
+{
+    color: #5E5E5E;
+    font-family: 'Open Sans',Arial;
+    font-size: 13px;
+}
+
+.wrapper2 ul.archivelist li h4 b
+{   
+    color: #960000;
+    font-weight:normal;
+}
+
+
+.tabbedcontent
+{
+	margin-bottom:30px;
+/*	margin-right:20px;*/
+}
+
+.tabbedcontent ul.tabs
+{
+	height:34px;
+	border-bottom:1px solid #acacac;
+	margin-bottom:20px;
+	clear:both;
+}
+
+.tabbedcontent ul.tabs li
+{
+	font-family:MuseoSlab700, Arial;
+	font-size:13px;
+	text-transform:uppercase;
+	cursor:pointer;
+	float:left;
+	color:#8a8a8a;
+	line-height:25px;
+	padding-top:4px;
+	border-bottom:5px solid #acacac;
+	padding-left:15px;
+	padding-right:15px;
+	position:relative;
+	display:block;
+	background-color:white;
+}
+
+.tabbedcontent ul.tabs li.active
+{
+	color:white;
+	background-color:#960000;
+	border-bottom:5px solid #960000;
+}
+
+.tabbedcontent ul.tabs li .imgArrow
+{
+	display:none;
+	background-image:url('/static/images/common/arrowRedDown1.gif');
+	background-repeat:no-repeat;
+	background-position:center top;
+	width:100%;
+	height:10px;
+}
+
+.tabbedcontent ul.tabs li .imgArrow.grey
+{
+	background-image:url('/static/images/common/arrowRedDown2.gif');
+}
+
+.tabbedcontent ul.tabs li.active .imgArrow
+{
+	display:block;
+	position:absolute;
+	top:34px;
+	left:0px;
+	right:0px;
+	z-index:10;
+}
+
+.tabbedcontent .tabcontent
+{
+	display:none;
+}
+
+.tabbedcontent .tabcontent.active
+{
+	display:block;
+}
+
+.dropdownChoiceContainer .inactive
+{
+	display:none;
+}
+
+.dropdownChoiceContainer .fancyDropDownContainer h2
+{
+	float:left;
+	color: #960000;
+    font-family: MuseoSlab700;
+    font-size: 17px;
+    margin-left: -8px;
+	padding-top:7px;
+	padding-right:10px;
+}
+
+.dropdownChoiceContent.cmbOdabirDokumenata
+{
+	padding-top: 15px;
+}
+
+.contentText1
+{
+	color:#494949;
+	font-family:"Open Sans", Arial;
+	font-size:14px;
+	line-height:22px;
+}
+
+.contentText1 a
+{
+	color:#960000;
+}
+
+
+.contentText1 p + h2
+{
+	margin-top:20px;
+}
+
+.contentText1 h2
+{
+	font-weight:bold;
+}
+
+.wrapper2 > .page .col2 .rightContentContainer h3
+{
+	color: #5E5E5E;
+    font-family: MuseoSlab700;
+    font-size: 20px;
+    margin-bottom: 5px;
+	text-transform:uppercase;
+}
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline .tabs
+{
+	margin-bottom:15px;
+}
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline div.timeline table.timeline tr td
+{
+	vertical-align:middle;
+	padding-top:20px;
+}
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline div.timeline
+{
+}
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline div.timeline table.timeline
+{
+	width:100%;
+}
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline div.timeline table.timeline tr td.godina
+{
+	font-family:'MuseoSlab700', Verdana, Arial;
+	color: #960000;
+	font-size:20px;
+	text-align:center;
+	width:170px;
+	background-image:url('/static/images/common/backRedLine1.gif');
+	background-position:80px;
+	background-repeat:repeat-y;
+}
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline div.timeline table.timeline tr td.godina span.godina
+{
+	display:block;
+	width:100%;
+	padding-top:2px;
+	padding-bottom:2px;
+	background-color:white;
+}
+
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline div.timeline table.timeline tr td.opis
+{
+	font-family:'Open Sans', Arial;
+	color: #5E5E5E;
+	font-size:14px;
+}
+
+.wrapper2 .col2 a.lnkMore
+{
+	width:110px;
+	height:16px;
+	display:block;
+	color:#727272;
+	font-family:MuseoSlab700;
+	font-size:13px;
+	text-transform:uppercase;
+	text-decoration:none;
+	background-image:url('/static/images/icons/josvijesti.gif');
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	text-indent:16px;
+	margin-left:auto;
+	margin-right:0px;
+}
+
+.wrapper2 .col2 a.lnkMore.matches
+{
+	width:130px;
+}
+
+h2.newslistTitle
+{
+	font-family:MuseoSlab700;
+	font-size:20px;
+	line-height:normal;
+	color:#6D6E71;
+	margin-bottom:15px;
+	padding-bottom:10px;
+	border-bottom:1px solid #ACACAC;
+    font-weight:normal;
+}
+
+h2.newslistTitle > a
+{
+	color:#960000;
+}
+
+h2.newslistTitle.borderbottom
+{
+	margin-top:40px;
+}
+
+
+.imgBigContainer
+{
+	width:100%;
+	background-color:#EEEEEE;
+	position:relative;
+}
+
+.imgBigContainer img.galleryBig
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:100%;
+}
+
+.imgBigContainer h6 {
+    background-color: #000000;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: "Open Sans",Arial;
+    font-size: 12px;
+    font-style: italic;
+    padding: 4px 9px 4px 8px;
+    position: absolute;
+    z-index: 100;
+	right:0px;
+	bottom:0px;
+}
+
+ul.gallery
+{
+	height:85px;
+}
+
+ul.gallery li
+{
+	float:left;
+	height:85px;
+}
+
+ul.gallery li + li
+{
+	margin-left:10px;
+}
+
+ul.gallery li img
+{
+	display:block;
+}
+
+.galleryContainer2
+{
+	margin-top:15px;
+	padding-left:25px;
+	padding-right:25px;
+	position:relative;
+	margin-bottom:20px;
+}
+
+
+.galleryContainer2 > .galleryContainer
+{
+	position:relative;
+	overflow:hidden;
+	height:85px;
+
+}
+
+.galleryContainer2 > img.imgScrollLeft
+{
+	position:absolute;
+	left:1px;
+	top:20px;
+	cursor:pointer;
+}
+
+.galleryContainer2 > img.imgScrollRight
+{
+	position:absolute;
+	right:1px;
+	top:20px;
+	cursor:pointer;
+}
+
+.touch .galleryContainer2 > .galleryContainer
+{
+	overflow:scroll;
+}
+
+.AnketaContainer
+{
+	float:right;
+	margin-left:40px;
+	margin-bottom:20px;
+}
+
+.AnketaContainer #divPitanje
+{
+	color:#960000;
+	font-family: MuseoSlab700;
+	font-size:20px;
+	line-height:normal;
+	margin-bottom:10px;
+}
+
+.AnketaContainer .AnketaOdgovori .tablePollAnswers td
+{
+	vertical-align:top;
+	padding-bottom:10px;
+}
+
+.AnketaContainer .AnketaOdgovori .tablePollAnswers td:nth-child(1)
+{
+	width:20px;
+	line-height:24px;
+}
+
+.AnketaContainer .AnketaPostotakLinija
+{
+	float:left;
+	background-color:#960000;
+	height:20px;
+	margin-bottom:10px;
+	margin-right:10px;
+	margin-top:2px;
+}
+
+.AnketaContainer .AnketaPostotakBroj
+{
+	color:#960000;
+	font-family: MuseoSlab500;
+	font-size:16px;
+	line-height:22px;
+}
+
+.social_share .st1
+{
+    float:left;
+    padding-top:10px;
+}
+
+.social_share .st2
+{
+    float:left;
+    padding-top:10px;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica
+{
+	width:100%;
+	border-top:40px solid #dfdfdf;
+	margin-bottom:20px;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica th
+{
+	padding-left:10px;
+	padding-right:10px;
+	text-align:center;
+	color:#6e6e6e;
+	font-family:"MuseoSlab700", Arial;
+	font-size:14px;
+	background-color:#dfdfdf;
+	border-bottom:10px solid #dfdfdf;
+	line-height:28px;
+	height:28px;
+}
+
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica td
+{
+	padding-left:10px;
+	padding-right:10px;
+	text-align:center;
+	font-family:'Open Sans', Arial;
+	font-size:14px;
+	line-height:16px;
+	height:38px;
+	vertical-align:middle;
+	color:#494949;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica td img
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	vertical-align:middle;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica th:nth-child(1),
+.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(1),
+.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(2)
+{
+	text-align:left;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(1)
+{
+	white-space:nowrap;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(2),
+.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(3)
+{
+	color:#960000;
+	font-weight:bold;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica td .zutikarton,
+.wrapper2 > .page > .col2 table.dnevnikutakmica td .crvenikarton
+{
+	width:6px;
+	height:6px;
+	display:inline-block;
+	background-color:#ffca2a;
+	vertical-align:middle;
+	margin-right:4px;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica td .crvenikarton
+{
+	background-color:#e70000;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica th:nth-child(1n+2)
+{
+	border-left:1px solid #b4b4b4;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica.futsal th:nth-child(5),
+.wrapper2 > .page > .col2 table.dnevnikutakmica.futsal td:nth-child(6)
+{
+	display:none;
+}
+
+
+@media screen and (max-width: 639px)
+{
+	.wrapper2 > .page > .col2 table.dnevnikutakmica th,
+	.wrapper2 > .page > .col2 table.dnevnikutakmica td
+	{
+		padding-left:5px;
+		padding-right:5px;
+	}
+
+	.wrapper2 > .page > .col2 table.dnevnikutakmica th:nth-child(1n+3),
+	.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(1n+4)
+	{
+		display:none;
+	}
+
+	.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(1) b
+	{
+		display:none;
+	}
+
+	#wrapper1 > #back1,
+	#wrapper1 > #back2
+	{
+		display:none;
+	}
+
+	.wrapper2 > #news1
+	{
+		position:relative;
+		width:100%;
+		height:100%;
+		margin-bottom:35px;
+	}
+
+	.wrapper2 > #news1 > ul#social
+	{
+		display:none;
+	}
+
+	.wrapper2 > #news1 > #news1title
+	{
+		left:10px;
+		bottom:-20px;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title
+	{
+		left:10px;
+		bottom: 0px;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title h4,
+	.wrapper2 > #news1.class2 > #news1title h5
+	{
+		display:none;
+	}
+
+	.wrapper2 > #news1 > #news1title h3
+	{
+		font-size:14px;
+		line-height:14px;
+		padding-bottom:4px;
+	}
+
+	.wrapper2 > #news1 > #news1title h2
+	{
+		font-size: 18px;
+		line-height:22px;
+	}
+
+	.wrapper2 > #news1 > #news1title a.more
+	{
+		font-size:14px;
+		line-height:18px;
+		height:18px;
+		width:110px;
+		margin-top:0px;
+	}
+
+
+	.wrapper2 > #news1 > img#news1img
+	{
+		width:100%;
+		display:block;
+	}
+
+	.wrapper2 > div.homepage > .col1 > #sljedecaUtakmica,
+	.wrapper2 > div.homepage > .col1 > #prethodnaUtakmica,
+	.wrapper2 > div.homepage > .col1 > #mojHNS,
+	.wrapper2 > div.homepage > .col1 > #ulaznice
+	{
+		margin-left:1%;
+		margin-right:auto;
+		width:320px;
+	}
+
+	.wrapper2 > #news2 > .col2
+	{
+		min-width:320px;
+	}
+
+	.wrapper2 ul.newslist
+	{
+		margin-left:5px;
+		clear:both;
+		overflow:hidden;
+	}
+
+	.wrapper2 ul.newslist li
+	{
+		width:100%;
+		float:none;
+		clear:both;
+		min-height:75px;
+	}
+
+	.wrapper2 ul.newslist li h3
+	{
+		font-size:11px;
+	}
+
+	.wrapper2 ul.newslist li h2
+	{
+		font-size:15px;
+		line-height:19px;
+		margin-top:3px;
+	}
+
+	.wrapper2 ul.newslist li p
+	{
+		display:none;
+	}
+
+	.wrapper2 ul.newslist li > .image
+	{
+		width:100px;
+		height:75px;
+	}
+
+	.wrapper2 ul.newslist li > .image img
+	{
+		width:100px;
+		height:75px;
+		display:block;
+	}
+
+	.tabbedcontent
+	{
+		margin-right:10px;
+	}
+
+	.AnketaContainer
+	{
+		float:none;
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom:20px;
+	}
+
+    .social_share
+    {
+
+    }
+}
+
+@media screen and (max-width: 959px)
+{
+	.wrapper2 > .page > .col2 table.dnevnikutakmica th:nth-child(5),
+	.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(6)
+	{
+		display:none;
+	}
+}
+
+
+@media screen and (min-width: 640px) and (max-width: 959px)
+{
+	#wrapper1 > #back1,
+	#wrapper1 > #back2
+	{
+		top: 140px;
+	}
+
+	.wrapper2 > #news1
+	{
+		position: relative;
+		height: 375px;
+		width: 100%;
+		z-index: 500;
+	}
+
+	.wrapper2 #news1 h6
+	{
+		top:auto;
+		bottom:0px;
+		right:0px;
+	}
+
+	.wrapper2 > #news1 > ul#social
+	{
+		display: none;
+	}
+
+	.wrapper2 > #news1 > #news1title
+	{
+		left: 20px;
+		width: 600px;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title
+	{
+		left: 20px;
+		width: 600px;
+		bottom: 0px;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title h4,
+	.wrapper2 > #news1.class2 > #news1title h5
+	{
+		display:none;
+	}
+
+	.wrapper2 > #news1 > img#news1img
+	{
+		position: absolute;
+		right: 0px;
+		z-index: 5;
+	}
+
+	.wrapper2 > div.homepage > .col1 > #sljedecaUtakmica,
+	.wrapper2 > div.homepage > .col1 > #prethodnaUtakmica,
+	.wrapper2 > div.homepage > .col1 > #mojHNS,
+	.wrapper2 > div.homepage > .col1 > #ulaznice
+	{
+		float:left;
+		margin-top:20px;
+		margin-left:40px;
+	}
+}
+
+@media screen and (min-width: 960px)
+{
+	/* glavna vijest */
+	#wrapper1 > #back1
+	{
+		height: 589px;
+		min-width: 1010px;
+	}
+
+	#wrapper1 > #back2
+	{
+		min-width:1010px;
+	}
+
+	.wrapper2 #news1 h6
+	{
+		top:auto;
+		bottom:0px;
+		right:77px;
+	}
+
+	.wrapper2 > #news1
+	{
+		position: relative;
+		height: 375px;
+/*		width: 762px;*/
+/*		float: right;*/
+		z-index: 500;
+/*		overflow:hidden;*/
+	}
+
+	.wrapper2 > #news1.class2 > #news1title
+	{
+		top:0px;
+		left:0px;
+		width: 600px;
+		bottom: 0px;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title h2
+	{
+		margin-left:25px;
+		z-index:10;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title h3
+	{
+		margin-left:25px;
+		z-index:10;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title h4
+	{
+		color:white;
+		font-family:Arial;
+		font-size:15px;
+		text-transform:uppercase;
+		font-weight:bold;
+		margin-top:30px;
+		margin-bottom:15px;
+		margin-left:30px;
+		z-index:10;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title h5
+	{
+		color:white;
+		font-family:Arial;
+		font-size:12px;
+		font-style:italic;
+		margin-top:12px;
+		margin-left:30px;
+		z-index:10;
+	}
+
+	.wrapper2 #news1titleback
+	{
+		background-image:url('/static/images/home/backGeneric_x3.jpg');
+		background-position:-700px 0px;
+		background-repeat:no-repeat;
+		width:398px;
+		height:375px;
+		position:absolute;
+		left:0px;
+		top:0px;
+		z-index:10;
+/*		display:block;*/
+		display:none;
+	}
+
+	.wrapper2 > #news1 > ul#social
+	{
+		position: absolute;
+		top: 14px;
+		right: 15px;
+		z-index: 10;
+	}
+
+	.wrapper2 > #news1 > ul#social > li
+	{
+		margin-bottom: 10px;
+	}
+
+	.wrapper2 > #news1 > ul#social > li > img
+	{
+		display: block;
+	}
+
+	.wrapper2 > #news1 > #news1title
+	{
+		right: 157px;
+		width: 635px;
+	}
+
+	.wrapper2 > #news1 > img#news1img
+	{
+		float:right;
+		margin-right:77px;
+		z-index: 5;
+	}
+
+	#wrapper1 > #footerContainer
+	{
+		background-color:#eeeeee;
+		background-image:url('/static/images/common/backFooterTop.gif');
+		background-position:center top;
+		background-repeat:no-repeat;	
+	}
+}

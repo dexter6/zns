@@ -1,0 +1,1337 @@
+/* glavna vijest */
+.wrapper2 #news1title > #news1titleback
+{
+	display:none;
+}
+
+.cookieEU
+{
+	min-height:60px;
+	background-color:#ababab;
+	background-image:url('/static/images/common/backGrayGrad60.gif');
+	background-repeat:repeat-x;
+	background-position:center bottom;
+	padding-top:12px;
+	padding-bottom:13px;
+	line-height:35px;
+	font-family: 'Open Sans',Arial;
+	text-align:center;
+	font-size:14px;
+	color:white;
+}
+
+.cookieEU a
+{
+	color:white;
+}
+
+.cookieEU .hrefCookieAgree
+{
+	display:inline-block;
+	background-color:#960000;
+	font-weight:bold;
+	width:104px;
+	height:35px;
+	line-height:35px;
+	text-transform:uppercase;
+	text-transform:uppercase;
+	text-decoration:none;
+	margin-left:10px;
+}
+
+#wrapper1 > #back1
+{
+	z-index:0;
+	position:absolute;
+	width:100%;
+	top:143px;
+	height:375px;
+	background-image:url('/static/images/home/backNews_x3.jpg');
+	background-position:center 0px;
+	background-repeat:no-repeat;
+}
+
+#wrapper1 > #back2
+{
+	z-index:0;
+	position:absolute;
+	width:100%;
+	top:143px;
+	height:375px;
+	background-image:url('/static/images/home/backGeneric_x3.jpg');
+	background-position:center 0px;
+	background-repeat:no-repeat;
+}
+
+.wrapper2 #news1 h6
+{
+	display:inline-block;
+	padding:4px;
+	padding-left:8px;
+	padding-right:9px;
+	color:white;
+	background-color:black;
+	font-family:"Open Sans", Arial;
+	font-size:12px;
+	font-style:italic;
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:100;
+}
+
+.wrapper2 > #news1 > #news1title h2
+{
+	line-height:30px;
+	color:white;
+	font-size: 30px;
+	line-height:34px;
+	font-family: MuseoSlab900;
+	font-weight: normal;
+	text-transform:uppercase;
+	font-style:normal;
+	max-width:550px;
+}
+
+.wrapper2 > #news1 > #news1title h2 a
+{
+	text-decoration:none;
+	color:white;
+}
+
+.wrapper2 > #news1 > #news1title h2 b
+{
+	font-weight:normal;
+	padding:2px 5px 0px 5px;
+	height:34px;
+	background-color:black;
+	overflow:hidden;
+}
+
+.wrapper2 > #news1 > #news1title h2 b + b
+{
+
+}
+
+.wrapper2 > #news1 > #news1title h3
+{
+	display:inline-block;
+	color:white;
+	background-color:black;
+	font-family:'Arial';
+	font-weight:bold;
+	font-size:19px;
+	line-height:30px;
+	padding-left:5px;
+	padding-right:5px;
+	text-transform:uppercase;
+/*	margin-left:25px;*/
+}
+
+.wrapper2 > #news1 > #news1title a.more
+{
+	display:inline-block;
+	color:white;
+	background-color:#960000;
+	text-decoration:none;
+	font-family:'Arial';
+	font-weight:bold;
+	font-size:14px;
+	line-height:25px;
+	height:25px;
+	text-transform:uppercase;
+	padding-left:5px;
+	padding-right:5px;
+	width:104px;
+}
+
+.wrapper2 > #news1.class2 > #news1title
+{
+	position:absolute;
+	z-index:500;
+}
+
+.wrapper2 > div.homepage > .col1 > #sljedecaUtakmica,
+.wrapper2 > div.homepage > .col1 > #prethodnaUtakmica,
+.wrapper2 > div.homepage > .col1 > #mojHNS,
+.wrapper2 > div.homepage > .col1 > #ulaznice
+{
+	height:185px;
+	padding-left:40px;
+}
+
+.wrapper2 > div.homepage > .col1 > #ulaznice
+{
+	height:300px;
+}
+
+.wrapper2 > div.classicContent.news.homepage > .col1 > #sljedecaUtakmica,
+.wrapper2 > div.classicContent.news.homepage > .col1 > #prethodnaUtakmica,
+.wrapper2 > div.classicContent.news.homepage > .col1 > #mojHNS,
+.wrapper2 > div.classicContent.news.homepage > .col1 > #ulaznice
+{
+	margin-left:10px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1 h2,
+.wrapper2 > div > .col1 > .backKosi1 h3,
+.wrapper2 > div > .col1 > .backKosi1 h4,
+.wrapper2 > div > .col1 > .backKosi1 h5
+{
+	margin-left:10px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1 h2
+{
+	font-family:MuseoSlab500;
+	font-size:13px;
+	line-height:13px;
+	color:#7d7d7d;
+	text-transform:uppercase;
+	height:15px;
+	margin-bottom:9px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1.uvuceno
+{
+	background-image:url('/static/images/common/backKosi1long2.png');
+	padding-left:45px;
+	min-height:80px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1.uvuceno h2,
+.wrapper2 > div > .col1 > .backKosi1.uvuceno h3,
+.wrapper2 > div > .col1 > .backKosi1.uvuceno h4
+{
+	margin-left:0px;
+}
+
+
+.wrapper2 > div > .col1 > .backKosi1.class2 h2,
+.wrapper2 > div > .col1 > .backKosi1.class3 h2
+{
+	font-family:MuseoSlab700;
+	color:#960000;
+	font-size:17px;
+	margin-left:0px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1.class3
+{
+	margin-bottom:30px;
+	margin-left:5px;
+}
+
+.wrapper2 .backKosi1.class3 ul li h3
+{
+	color: #919191;
+    font-family: Arial;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.wrapper2 .backKosi1.class3 ul li
+{
+	overflow:hidden;
+	padding-bottom:10px;
+}
+
+.wrapper2 .backKosi1.class3 ul li + li
+{
+	border-top:1px solid #cccccc;
+	padding-top:4px;
+}
+
+
+.wrapper2 .backKosi1.class3 ul li h2
+{
+	font-family:MuseoSlab500;
+	font-size:17px;
+	text-transform:none;
+	color:#960000;
+	line-height:20px;
+	margin-top:0px;
+	margin-bottom:0px;
+	height:auto;
+}
+
+.wrapper2 .backKosi1.class3 ul li h2 a
+{
+	font-family:MuseoSlab500;
+	text-decoration:none;
+	color:#960000;
+}
+
+.wrapper2 .backKosi1.class3 ul li h2:hover
+{
+	text-decoration:underline;
+}
+
+
+
+
+.wrapper2 > div > .col1 > .backKosi1 h3
+{
+	font-family:MuseoSlab700;
+	font-size:20px;
+	text-transform:uppercase;
+	color:#960000;
+	line-height:20px;
+	margin-top:2px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1 h4
+{
+	font-family:MuseoSlab700;
+	font-size:20px;
+	color:#6d6e71;
+	line-height:20px;
+	margin-top:2px;
+}
+
+.wrapper2 > div > .col1 > .backKosi1 h5
+{
+	font-family:'Open Sans', Arial;
+	font-size:14px;
+	color:#6d6e71;
+	text-transform:uppercase;
+	line-height:14px;
+	margin-top:13px;
+}
+
+.wrapper2 .page ul.documentlist
+{
+	clear:both;
+}
+
+.wrapper2 .page ul.documentlist.collapsed
+{
+    display:none;
+}
+
+.wrapper2 .page .cmbOdabirDokumenata h2
+{
+	color: #494949;
+    font-family: MuseoSlab700;
+    font-size: 17px;
+	padding-top:14px;
+    margin-bottom:6px;
+}
+
+.wrapper2 .page .cmbOdabirDokumenata h2 a{
+	color: #494949;
+    text-decoration:none;
+    border-bottom:1px dotted #494949;
+}
+
+.wrapper2 .page .cmbOdabirDokumenata h2 a:hover
+{
+    border-bottom:1px solid #494949;
+}
+
+
+
+.wrapper2 .page ul.documentlist li h4
+{
+	color: #919191;
+	font-family: Arial;
+	font-size: 12px;
+	font-style: italic;
+	float:left;
+	line-height:24px;
+	margin-right:8px;
+}
+
+.wrapper2 .page ul.documentlist li h3
+{
+    color: #960000;
+    font-family: MuseoSlab700;
+    font-size: 17px;
+	line-height:20px;
+}
+
+.wrapper2 .page ul.documentlist li h3 a
+{
+	color: #960000;
+	font-family: MuseoSlab500;
+	text-decoration: none;
+}
+
+.wrapper2 .page ul.documentlist li h3 a:hover
+{
+	text-decoration:underline;
+}
+
+
+.wrapper2 .page ul.documentlist li
+{
+	clear:both;
+	overflow:hidden;
+	margin-bottom:15px;
+}
+
+.wrapper2 ul.newslist
+{
+	clear:both;
+}
+
+.wrapper2 ul.newslist li
+{
+	clear:both;
+	max-height:120px;
+	overflow:hidden;
+	margin-bottom:30px;
+}
+
+.wrapper2 ul.newslist li > .image
+{
+	width:160px;
+	height:120px;
+	background-color:#d8d8d8;
+	float:left;
+	margin-right:10px;
+}
+
+.wrapper2 ul.newslist li > .image img
+{
+	width:160px;
+	height:120px;
+	display:block;
+}
+
+.wrapper2 ul.newslist li h3
+{
+	color:#919191;
+	font-size:12px;
+	font-family:Arial;
+	font-style:italic;
+}
+
+.wrapper2 ul.newslist li h2,
+.wrapper2 ul.newslist li h2 a
+{
+	color:#960000;
+	font-size:17px;
+	font-family:MuseoSlab700;
+	text-decoration:none;
+	line-height:23px;
+	margin-bottom:4px;
+	margin-top:2px;
+}
+
+.wrapper2 ul.newslist li h2 a:hover
+{
+	text-decoration:underline;
+}
+
+
+.wrapper2 ul.newslist li p
+{
+	color:#5e5e5e;
+	font-size:13px;
+	line-height:19px;
+	font-family:'Open Sans', Arial;
+}
+
+.wrapper2 ul.archivelist
+{
+	clear:both;
+    margin-bottom:25px;
+}
+
+.wrapper2 ul.archivelist li
+{
+	clear:both;
+	overflow:hidden;
+	margin-bottom:12px;
+}
+
+.wrapper2 ul.archivelist li+li
+{
+    padding-top:12px;
+    border-top:1px dotted #5e5e5e;
+}
+
+
+.wrapper2 ul.archivelist li h3
+{
+    color: #960000;
+    font-family: MuseoSlab700;
+    font-size: 17px;
+    line-height: 23px;
+    margin-bottom: 4px;
+    margin-top: 2px;
+}
+
+.wrapper2 ul.archivelist li h3 a
+{
+    color: #960000;
+    text-decoration:underline;
+}
+
+.wrapper2 ul.archivelist li h3 a:hover
+{
+    text-decoration:underline;
+}
+
+.wrapper2 ul.archivelist li h4
+{  
+    display:inline-block;
+    margin-right:15px;
+    color: #5E5E5E;
+    font-family: 'Open Sans',Arial;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+input#arhivaInput
+{
+    padding:5px;
+    border:1px solid #ACACAC;
+    width:300px;
+    margin-bottom:10px;
+}
+
+.wrapper2 ul.archivelist p
+{
+    color: #5E5E5E;
+    font-family: 'Open Sans',Arial;
+    font-size: 13px;
+}
+
+.wrapper2 ul.archivelist li h4 b
+{   
+    color: #960000;
+    font-weight:normal;
+}
+
+
+.tabbedcontent
+{
+	margin-bottom:30px;
+/*	margin-right:20px;*/
+}
+
+.tabbedcontent ul.tabs
+{
+	height:34px;
+	border-bottom:1px solid #acacac;
+	margin-bottom:20px;
+	clear:both;
+}
+
+.tabbedcontent ul.tabs li
+{
+	font-family:MuseoSlab700, Arial;
+	font-size:13px;
+	text-transform:uppercase;
+	cursor:pointer;
+	float:left;
+	color:#8a8a8a;
+	line-height:25px;
+	padding-top:4px;
+	border-bottom:5px solid #acacac;
+	padding-left:15px;
+	padding-right:15px;
+	position:relative;
+	display:block;
+	background-color:white;
+}
+
+.tabbedcontent ul.tabs li.active
+{
+	color:white;
+	background-color:#960000;
+	border-bottom:5px solid #960000;
+}
+
+.tabbedcontent ul.tabs li .imgArrow
+{
+	display:none;
+	background-image:url('/static/images/common/arrowRedDown1.gif');
+	background-repeat:no-repeat;
+	background-position:center top;
+	width:100%;
+	height:10px;
+}
+
+.tabbedcontent ul.tabs li .imgArrow.grey
+{
+	background-image:url('/static/images/common/arrowRedDown2.gif');
+}
+
+.tabbedcontent ul.tabs li.active .imgArrow
+{
+	display:block;
+	position:absolute;
+	top:34px;
+	left:0px;
+	right:0px;
+	z-index:10;
+}
+
+.tabbedcontent .tabcontent
+{
+	display:none;
+}
+
+.tabbedcontent .tabcontent.active
+{
+	display:block;
+}
+
+.dropdownChoiceContainer .inactive
+{
+	display:none;
+}
+
+.dropdownChoiceContainer .fancyDropDownContainer h2
+{
+	float:left;
+	color: #960000;
+    font-family: MuseoSlab700;
+    font-size: 17px;
+    margin-left: -8px;
+	padding-top:7px;
+	padding-right:10px;
+}
+
+.dropdownChoiceContent.cmbOdabirDokumenata
+{
+	padding-top: 15px;
+}
+
+.contentText1
+{
+	color:#494949;
+	font-family:"Open Sans", Arial;
+	font-size:14px;
+	line-height:22px;
+}
+
+.contentText1 a
+{
+	color:#960000;
+}
+
+
+.contentText1 p + h2
+{
+	margin-top:20px;
+}
+
+.contentText1 h2
+{
+	font-weight:bold;
+}
+
+.wrapper2 > .page .col2 .rightContentContainer h3
+{
+	color: #5E5E5E;
+    font-family: MuseoSlab700;
+    font-size: 20px;
+    margin-bottom: 5px;
+	text-transform:uppercase;
+}
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline .tabs
+{
+	margin-bottom:15px;
+}
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline div.timeline table.timeline tr td
+{
+	vertical-align:middle;
+	padding-top:20px;
+}
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline div.timeline
+{
+}
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline div.timeline table.timeline
+{
+	width:100%;
+}
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline div.timeline table.timeline tr td.godina
+{
+	font-family:'MuseoSlab700', Verdana, Arial;
+	color: #960000;
+	font-size:20px;
+	text-align:center;
+	width:170px;
+	background-image:url('/static/images/common/backRedLine1.gif');
+	background-position:80px;
+	background-repeat:repeat-y;
+}
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline div.timeline table.timeline tr td.godina span.godina
+{
+	display:block;
+	width:100%;
+	padding-top:2px;
+	padding-bottom:2px;
+	background-color:white;
+}
+
+
+.wrapper2 > .page .col2 .rightContentContainer.timeline div.timeline table.timeline tr td.opis
+{
+	font-family:'Open Sans', Arial;
+	color: #5E5E5E;
+	font-size:14px;
+}
+
+.wrapper2 .col2 a.lnkMore
+{
+	width:110px;
+	height:16px;
+	display:block;
+	color:#727272;
+	font-family:MuseoSlab700;
+	font-size:13px;
+	text-transform:uppercase;
+	text-decoration:none;
+	background-image:url('/static/images/icons/josvijesti.gif');
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	text-indent:16px;
+	margin-left:auto;
+	margin-right:0px;
+}
+
+.wrapper2 .col2 a.lnkMore.matches
+{
+	width:130px;
+}
+
+h2.newslistTitle
+{
+	font-family:MuseoSlab700;
+	font-size:20px;
+	line-height:normal;
+	color:#6D6E71;
+	margin-bottom:15px;
+	padding-bottom:10px;
+	border-bottom:1px solid #ACACAC;
+    font-weight:normal;
+}
+
+h2.newslistTitle > a
+{
+	color:#960000;
+}
+
+h2.newslistTitle.borderbottom
+{
+	margin-top:40px;
+}
+
+
+.imgBigContainer
+{
+	width:100%;
+	background-color:#EEEEEE;
+	position:relative;
+}
+
+.imgBigContainer img.galleryBig
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:100%;
+}
+
+.imgBigContainer h6 {
+    background-color: #000000;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: "Open Sans",Arial;
+    font-size: 12px;
+    font-style: italic;
+    padding: 4px 9px 4px 8px;
+    position: absolute;
+    z-index: 100;
+	right:0px;
+	bottom:0px;
+}
+
+ul.gallery
+{
+	height:85px;
+}
+
+ul.gallery li
+{
+	float:left;
+	height:85px;
+}
+
+ul.gallery li + li
+{
+	margin-left:10px;
+}
+
+ul.gallery li img
+{
+	display:block;
+}
+
+.galleryContainer2
+{
+	margin-top:15px;
+	padding-left:25px;
+	padding-right:25px;
+	position:relative;
+	margin-bottom:20px;
+}
+
+
+.galleryContainer2 > .galleryContainer
+{
+	position:relative;
+	overflow:hidden;
+	height:85px;
+
+}
+
+.galleryContainer2 > img.imgScrollLeft
+{
+	position:absolute;
+	left:1px;
+	top:20px;
+	cursor:pointer;
+}
+
+.galleryContainer2 > img.imgScrollRight
+{
+	position:absolute;
+	right:1px;
+	top:20px;
+	cursor:pointer;
+}
+
+.touch .galleryContainer2 > .galleryContainer
+{
+	overflow:scroll;
+}
+
+.AnketaContainer
+{
+	float:right;
+	margin-left:40px;
+	margin-bottom:20px;
+}
+
+.AnketaContainer #divPitanje
+{
+	color:#960000;
+	font-family: MuseoSlab700;
+	font-size:20px;
+	line-height:normal;
+	margin-bottom:10px;
+}
+
+.AnketaContainer .AnketaOdgovori .tablePollAnswers td
+{
+	vertical-align:top;
+	padding-bottom:10px;
+}
+
+.AnketaContainer .AnketaOdgovori .tablePollAnswers td:nth-child(1)
+{
+	width:20px;
+	line-height:24px;
+}
+
+.AnketaContainer .AnketaPostotakLinija
+{
+	float:left;
+	background-color:#960000;
+	height:20px;
+	margin-bottom:10px;
+	margin-right:10px;
+	margin-top:2px;
+}
+
+.AnketaContainer .AnketaPostotakBroj
+{
+	color:#960000;
+	font-family: MuseoSlab500;
+	font-size:16px;
+	line-height:22px;
+}
+
+.social_share .st1
+{
+    float:left;
+    padding-top:10px;
+}
+
+.social_share .st2
+{
+    float:left;
+    padding-top:10px;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica
+{
+	width:100%;
+	border-top:40px solid #dfdfdf;
+	margin-bottom:20px;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica th
+{
+	padding-left:10px;
+	padding-right:10px;
+	text-align:center;
+	color:#6e6e6e;
+	font-family:"MuseoSlab700", Arial;
+	font-size:14px;
+	background-color:#dfdfdf;
+	border-bottom:10px solid #dfdfdf;
+	line-height:28px;
+	height:28px;
+}
+
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica td
+{
+	padding-left:10px;
+	padding-right:10px;
+	text-align:center;
+	font-family:'Open Sans', Arial;
+	font-size:14px;
+	line-height:16px;
+	height:38px;
+	vertical-align:middle;
+	color:#494949;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica td img
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	vertical-align:middle;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica th:nth-child(1),
+.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(1),
+.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(2)
+{
+	text-align:left;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(1)
+{
+	white-space:nowrap;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(2),
+.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(3)
+{
+	color:#960000;
+	font-weight:bold;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica td .zutikarton,
+.wrapper2 > .page > .col2 table.dnevnikutakmica td .crvenikarton
+{
+	width:6px;
+	height:6px;
+	display:inline-block;
+	background-color:#ffca2a;
+	vertical-align:middle;
+	margin-right:4px;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica td .crvenikarton
+{
+	background-color:#e70000;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica th:nth-child(1n+2)
+{
+	border-left:1px solid #b4b4b4;
+}
+
+.wrapper2 > .page > .col2 table.dnevnikutakmica.futsal th:nth-child(5),
+.wrapper2 > .page > .col2 table.dnevnikutakmica.futsal td:nth-child(6)
+{
+	display:none;
+}
+
+
+@media screen and (max-width: 639px)
+{
+	.wrapper2 > .page > .col2 table.dnevnikutakmica th,
+	.wrapper2 > .page > .col2 table.dnevnikutakmica td
+	{
+		padding-left:5px;
+		padding-right:5px;
+	}
+
+	.wrapper2 > .page > .col2 table.dnevnikutakmica th:nth-child(1n+3),
+	.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(1n+4)
+	{
+		display:none;
+	}
+
+	.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(1) b
+	{
+		display:none;
+	}
+
+	#wrapper1 > #back1,
+	#wrapper1 > #back2
+	{
+		display:none;
+	}
+
+	.wrapper2 > #news1
+	{
+		position:relative;
+		width:100%;
+		height:100%;
+		margin-bottom:35px;
+	}
+
+	.wrapper2 > #news1 > ul#social
+	{
+		display:none;
+	}
+
+	.wrapper2 > #news1 > #news1title
+	{
+		left:10px;
+		bottom:-20px;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title
+	{
+		left:10px;
+		bottom: 0px;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title h4,
+	.wrapper2 > #news1.class2 > #news1title h5
+	{
+		display:none;
+	}
+
+	.wrapper2 > #news1 > #news1title h3
+	{
+		font-size:14px;
+		line-height:14px;
+		padding-bottom:4px;
+	}
+
+	.wrapper2 > #news1 > #news1title h2
+	{
+		font-size: 18px;
+		line-height:22px;
+	}
+
+	.wrapper2 > #news1 > #news1title a.more
+	{
+		font-size:14px;
+		line-height:18px;
+		height:18px;
+		width:110px;
+		margin-top:0px;
+	}
+
+
+	.wrapper2 > #news1 > img#news1img
+	{
+		width:100%;
+		display:block;
+	}
+
+	.wrapper2 > div.homepage > .col1 > #sljedecaUtakmica,
+	.wrapper2 > div.homepage > .col1 > #prethodnaUtakmica,
+	.wrapper2 > div.homepage > .col1 > #mojHNS,
+	.wrapper2 > div.homepage > .col1 > #ulaznice
+	{
+		margin-left:1%;
+		margin-right:auto;
+		width:320px;
+	}
+
+	.wrapper2 > #news2 > .col2
+	{
+		min-width:320px;
+	}
+
+	.wrapper2 ul.newslist
+	{
+		margin-left:5px;
+		clear:both;
+		overflow:hidden;
+	}
+
+	.wrapper2 ul.newslist li
+	{
+		width:100%;
+		float:none;
+		clear:both;
+		min-height:75px;
+	}
+
+	.wrapper2 ul.newslist li h3
+	{
+		font-size:11px;
+	}
+
+	.wrapper2 ul.newslist li h2
+	{
+		font-size:15px;
+		line-height:19px;
+		margin-top:3px;
+	}
+
+	.wrapper2 ul.newslist li p
+	{
+		display:none;
+	}
+
+	.wrapper2 ul.newslist li > .image
+	{
+		width:100px;
+		height:75px;
+	}
+
+	.wrapper2 ul.newslist li > .image img
+	{
+		width:100px;
+		height:75px;
+		display:block;
+	}
+
+	.tabbedcontent
+	{
+		margin-right:10px;
+	}
+
+	.AnketaContainer
+	{
+		float:none;
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom:20px;
+	}
+
+    .social_share
+    {
+
+    }
+}
+
+@media screen and (max-width: 959px)
+{
+	.wrapper2 > .page > .col2 table.dnevnikutakmica th:nth-child(5),
+	.wrapper2 > .page > .col2 table.dnevnikutakmica td:nth-child(6)
+	{
+		display:none;
+	}
+}
+
+
+@media screen and (min-width: 640px) and (max-width: 959px)
+{
+	#wrapper1 > #back1,
+	#wrapper1 > #back2
+	{
+		top: 140px;
+	}
+
+	.wrapper2 > #news1
+	{
+		position: relative;
+		height: 375px;
+		width: 100%;
+		z-index: 500;
+	}
+
+	.wrapper2 #news1 h6
+	{
+		top:auto;
+		bottom:0px;
+		right:0px;
+	}
+
+	.wrapper2 > #news1 > ul#social
+	{
+		display: none;
+	}
+
+	.wrapper2 > #news1 > #news1title
+	{
+		left: 20px;
+		width: 600px;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title
+	{
+		left: 20px;
+		width: 600px;
+		bottom: 0px;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title h4,
+	.wrapper2 > #news1.class2 > #news1title h5
+	{
+		display:none;
+	}
+
+	.wrapper2 > #news1 > img#news1img
+	{
+		position: absolute;
+		right: 0px;
+		z-index: 5;
+	}
+
+	.wrapper2 > div.homepage > .col1 > #sljedecaUtakmica,
+	.wrapper2 > div.homepage > .col1 > #prethodnaUtakmica,
+	.wrapper2 > div.homepage > .col1 > #mojHNS,
+	.wrapper2 > div.homepage > .col1 > #ulaznice
+	{
+		float:left;
+		margin-top:20px;
+		margin-left:40px;
+	}
+}
+
+@media screen and (min-width: 960px)
+{
+	/* glavna vijest */
+	#wrapper1 > #back1
+	{
+		height: 589px;
+		min-width: 1010px;
+	}
+
+	#wrapper1 > #back2
+	{
+		min-width:1010px;
+	}
+
+	.wrapper2 #news1 h6
+	{
+		top:auto;
+		bottom:0px;
+		right:77px;
+	}
+
+	.wrapper2 > #news1
+	{
+		position: relative;
+		height: 375px;
+/*		width: 762px;*/
+/*		float: right;*/
+		z-index: 500;
+/*		overflow:hidden;*/
+	}
+
+	.wrapper2 > #news1.class2 > #news1title
+	{
+		top:0px;
+		left:0px;
+		width: 600px;
+		bottom: 0px;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title h2
+	{
+		margin-left:25px;
+		z-index:10;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title h3
+	{
+		margin-left:25px;
+		z-index:10;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title h4
+	{
+		color:white;
+		font-family:Arial;
+		font-size:15px;
+		text-transform:uppercase;
+		font-weight:bold;
+		margin-top:30px;
+		margin-bottom:15px;
+		margin-left:30px;
+		z-index:10;
+	}
+
+	.wrapper2 > #news1.class2 > #news1title h5
+	{
+		color:white;
+		font-family:Arial;
+		font-size:12px;
+		font-style:italic;
+		margin-top:12px;
+		margin-left:30px;
+		z-index:10;
+	}
+
+	.wrapper2 #news1titleback
+	{
+		background-image:url('/static/images/home/backGeneric_x3.jpg');
+		background-position:-700px 0px;
+		background-repeat:no-repeat;
+		width:398px;
+		height:375px;
+		position:absolute;
+		left:0px;
+		top:0px;
+		z-index:10;
+/*		display:block;*/
+		display:none;
+	}
+
+	.wrapper2 > #news1 > ul#social
+	{
+		position: absolute;
+		top: 14px;
+		right: 15px;
+		z-index: 10;
+	}
+
+	.wrapper2 > #news1 > ul#social > li
+	{
+		margin-bottom: 10px;
+	}
+
+	.wrapper2 > #news1 > ul#social > li > img
+	{
+		display: block;
+	}
+
+	.wrapper2 > #news1 > #news1title
+	{
+		right: 157px;
+		width: 635px;
+	}
+
+	.wrapper2 > #news1 > img#news1img
+	{
+		float:right;
+		margin-right:77px;
+		z-index: 5;
+	}
+
+	#wrapper1 > #footerContainer
+	{
+		background-color:#eeeeee;
+		background-image:url('/static/images/common/backFooterTop.gif');
+		background-position:center top;
+		background-repeat:no-repeat;	
+	}
+}

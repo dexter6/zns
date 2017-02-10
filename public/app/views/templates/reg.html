@@ -1,0 +1,41 @@
+<div id="login-form">
+
+    <h3>Login</h3>
+
+
+    <fieldset class="form-group">
+
+        <label>Korisničko ime:</label>
+        <input class="form-control" type="text" ng-model="newuser.username" placeholder="Korisničko ime" required/>
+
+    </fieldset>
+    <fieldset class="form-group">
+        <label>Lozinka:</label>
+        <input class="form-control" type="password" ng-model="newuser.password" placeholder="Lozinka" required/>
+
+    </fieldset>
+    </fieldset>
+    <fieldset class="form-group">
+        <label>Ponovi lozinku:</label>
+        <input class="form-control" type="password" ng-model="newuser.rPassword" placeholder="Ponovi lozinku" required/>
+
+    </fieldset>
+    <fieldset class="form-group">
+        <label>E-mail:</label>
+        <input class="form-control" type="email" ng-model="newuser.mail" placeholder="nesto@primjer.__" required/>
+
+    </fieldset>
+
+    <div class="alert alert-danger" ng-if="message">
+        {{ message }}
+    </div>
+
+    <button class="btn btn-success" ng-click="register()">
+
+        Register
+
+    </button>
+
+
+
+</div>

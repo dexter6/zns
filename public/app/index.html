@@ -1,0 +1,199 @@
+<html ng-app="znsApp">
+<head>
+<title>ZNS Kutina</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" type="text/css" href="../app/css/common.css">
+<link rel="stylesheet" type="text/css" href="../app/css/commonparts.css">
+
+<link rel="stylesheet" type="text/css" href="../app/css/css.css">
+
+<link rel="stylesheet" type="text/css" href="../app/css/default-ravno.css">
+
+<link rel="stylesheet" type="text/css" href="../app/css/dropdown2.css">
+<link rel="stylesheet" type="text/css" href="../app/css/hnscssreset.css">
+
+<link rel="stylesheet" type="text/css" href="../app/css/jquery-fancybox-buttons.css">
+<link rel="stylesheet" type="text/css" href="../app/css/jquery-fancybox-thumbs.css">
+<link rel="stylesheet" type="text/css" href="../app/css/jquery-fancybox.css">
+<link rel="stylesheet" type="text/css" href="../app/css/letro.css">
+<link rel="stylesheet" type="text/css" href="../app/css/sidenav.css">
+<link rel="stylesheet" type="text/css" href="../app/css/timeline.b8c9678c5f483d972f51f35dc84e4e40.light.ltr.css">
+<link rel="stylesheet" type="text/css" href="../app/css/mouselab.css">
+<link rel="stylesheet" type="text/css" href="../app/css/um16.css">
+<link rel="stylesheet" type="text/css" href="../app/css/um17.css">
+<link rel="stylesheet" type="text/css" href="../app/css/um0.css">
+<link rel="stylesheet" type="text/css" href="../app/css/um1.css">
+<link rel="stylesheet" type="text/css" href="../app/css/um2.css">
+
+
+
+
+<link rel="stylesheet" type="text/css" href="../app/css/main.css">
+
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>"//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-touch.js"</script>
+<script src="../app/js/app.js"></script>
+    <script src="../app/js/controllers.js"></script>
+    <script src="../app/js/directives.js"></script>
+    <script src="../app/js/factories.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+<script src="../app/js/tinymce/tinymce.min.js"></script>
+
+
+
+
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-navbar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+<div id="bg">
+    <img src="../assets/img/HNS.png" alt="">
+</div>
+<div id="headerContainer" class="wrapper2 headerContainer" style="z-index:5000;">
+    <div id="header" ng-controller="NavCtrl">
+        <div class="col1">
+            <a href="/#/" id="hrefLogo" title="Zbor nogometnih sudaca Kutina"><img class="imgHQ" id="logo" src="../assets/img/sudac_grb.png"  alt="Zbor nogometnih sudaca Kutina"></a>
+        </div>
+        <div class="col2">
+            <a id="simple-menu" href="#sidr"><img src="../assets/img/togglemenu.png" alt="Prikaži izbornik"></a>
+            <div id="navContainer">
+                <ul id="nav">
+                    <li style="width:100px;"><a href="#/clanovi">Ćlanovi</a>
+                        <div class="backWhite"></div>
+                    </li>
+                    <li style="width:100px;"><a class="nolink" href="#/dokumenti">Dokumenti</a>
+                        <div class="backWhite"></div>
+
+                    </li>
+                    <li style="width:100px;"><a href="#/galerija/">Galerija</a>
+                        <div class="backWhite"></div>
+
+                    </li>
+                    <li style="width:100px;"><a href="#/reg">Registracija</a>
+                        <div class="backWhite"></div>
+
+                    </li>
+                    <li style="width:100px;"><a href="#/login" ng-hide="authen">Login/out</a>
+                        <div class="backWhite"></div>
+
+
+                    </li>
+
+                </ul>
+                <div class="clear"></div>
+                <div id="navMobile">
+                    <a class="hrvatski" title="Hrvatski" href="/">HRV</a>
+                    <a class="english" title="English" href="/en/">ENG</a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="col3">
+            <a href="https://www.ns-kutina.hr" id="nsktLogo" title="Nogometno središte Kutina"><img class="imgHQ" id="nsktLogoimg" src="../assets/img/nskt.png" alt="Nogometno središte Kutina"></a>
+        </div>
+        <div style="clear:both;"></div>
+
+    </div>
+</div>
+
+<div ng-view autoscroll="true" class="w3-container">
+
+</div>
+
+<div id="footerContainer">
+    <div class="wrapper2">
+        <div id="footer">
+
+            <div id="linkovi">
+                <ul>
+                    <li class="st1">
+                        <br>
+                        <h2><a href="#/clanovi">Članovi</a></h2>
+
+                    </li>
+                    <li class="st2">
+                        <br>
+                        <h2><a href="#/galerija">Galerija</a></h2>
+
+                    </li>
+                    <li class="st3">
+                        <br>
+                        <h2><a href="#/dokumenti">Dokumenti</a></h2>
+
+                    </li>
+                    <li class="st4">
+                        <ul>
+                            <li class="r1">
+                                <ul>
+                                    <li>
+                                        <b>Zbor nogometnih sudaca</b><br>
+                                        Hrvatskih branitelja 10<br>
+                                        44320 Kutina<br>
+                                        Hrvatska / Croatia<br>
+                                    </li>
+                                    <li>
+                                        T: telefoni<br>
+                                        E: mail,  W: web<br>
+                                        IBAN: ...<br>
+                                        OIB: ...
+
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="r3">
+                                <ul>
+                                    <li>
+                                        Link NSSMŽ
+                                    </li>
+                                    <li>
+                                        Link NSKT
+                                    <li>
+                                        I već kojih se linkova sjetimo
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div id="sidr" class="sidr right"><div class="sidr-inner">
+    <ul id="sidr-id-nav">
+        <li><a class="sidr-class-nolink">HNS</a>
+            <div class="sidr-class-backWhite"></div>
+        </li>
+        <li><a class="sidr-class-nolink">Info</a>
+            <div class="sidr-class-backWhite"></div>
+        </li>
+        <li><a href="/reprezentacije/">Reprezentacije</a>
+            <div class="sidr-class-backWhite"></div>
+        </li>
+        <li><a class="sidr-class-nolink">Natjecanja</a>
+            <div class="sidr-class-backWhite"></div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+</div>
+</body>
+</html>

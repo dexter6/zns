@@ -1,0 +1,84 @@
+@CHARSET "UTF-8";
+.sbHolder{
+	border: 0px none;
+	font-family:MuseoSlab700, Arial;
+	font-size:13px;
+	font-weight: normal;
+	height: 33px;
+	position: relative;
+	width: 251px;
+
+	text-transform:uppercase;
+	color:#b4b4b4;
+
+	background-image:url('/static/images/common/backLinkDown275noshadow.png');
+
+	-webkit-box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.75);
+	box-shadow: 5px 5px 16px -7px rgba(0,0,0,0.75);
+}
+
+.sbSelector{
+	display: block;
+	height: 33px;
+	left: 0;
+	line-height: 33px;
+	outline: none;
+	position: absolute;
+	text-indent: 12px;
+	top: 0;
+	width: 251px;
+}
+
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover{
+	color:#b4b4b4;
+	outline: none;
+	text-decoration: none;
+}
+
+.sbToggle{
+/*	background: url(select-icons.png) 0 -116px no-repeat;*/
+	display: block;
+	height: 33px;
+	outline: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 33px;
+}
+
+.sbOptions
+{
+	background-color: black;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 33px;
+	width: 251px;
+	z-index: 30;
+	overflow-y: auto !important;
+/*	max-height:340px !important;*/
+}
+.sbOptions li{
+	padding: 0px;
+	font-family:'Open Sans', Arial;
+	font-size:14px;
+	color:#b4b4b4;
+}
+.sbOptions a{
+	display: block;
+	outline: none;
+	padding: 7px 0 7px 14px;
+	color:#b4b4b4;
+	text-decoration:none;
+	text-transform:none;
+}
+
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus{
+	color: white;
+	background-image: url("/static/images/common/backDropDown251item.gif")
+
+}

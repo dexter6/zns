@@ -1,0 +1,30 @@
+<div id="login-form">
+
+    <h3>Login</h3>
+
+
+    <fieldset class="form-group">
+
+        <label>Username</label>
+        <input class="form-control" type="text" ng-model="credentials.username" placeholder="Username" required/>
+
+    </fieldset>
+    <fieldset class="form-group">
+        <label>Password:</label>
+        <input class="form-control" type="password" ng-model="credentials.password" placeholder="Password" required/>
+
+    </fieldset>
+
+    <div class="alert alert-danger" ng-if="message">
+        {{ message }}
+    </div>
+
+    <button class="btn btn-success" ng-click="login()">
+
+        Login
+
+    </button>
+
+
+
+</div>

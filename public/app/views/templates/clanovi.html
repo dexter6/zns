@@ -1,0 +1,112 @@
+<button class="btn btn-info" ng-click="add=!add" ng-show="!add && level=='admin'">Dodaj člana</button>
+<button class="btn btn-danger" ng-click="add=!add" ng-show="add">Nemoj dodati</button>
+<br>
+<div class="well w3-third" ng-show="add">
+    <form name="noviClan" novalidate ng-submit="addClan(noviClan.$valid)">
+        <fieldset class="form-group" ng-class="{'has-error': noviClan.ime.$invalid && !noviClan.ime.$pristine}">
+            <label>Ime: </label>
+            <input name = "ime" class="form-control" type="text" ng-model="new.ime" required>
+        </fieldset>
+        <fieldset class="form-group" ng-class="{'has-error':noviClan.prezime.$invalid && !noviClan.prezime.$pristine}">
+            <label>Prezime: </label>
+            <input name = "prezime" class="form-control" type="text" ng-model="new.prezime" required>
+        </fieldset>
+        <fieldset class="form-group" ng-class="{'has-error':noviClan.mjesto.$invalid && !noviClan.mjesto.$pristine}">
+            <label>Mjesto: </label>
+            <input name = "mjesto" class="form-control" type="text" ng-model="new.mjesto" required>
+        </fieldset>
+        <fieldset class="form-group" ng-class="{'has-error':noviClan.rodjendan.$invalid && !noviClan.rodjendan.$pristine}">
+            <label>Datum rođenja: </label>
+            <input name = "rodjendan" class="form-control" type="text" ng-model="new.rodjendan" required>
+        </fieldset>
+        <fieldset class="form-group" ng-class="{'has-error':noviClan.rodjendan.$invalid && !noviClan.rodjendan.$pristine}">
+            <label>Kategorija: </label>
+            <select name = "kategorija" class="form-control" type="text" ng-model="new.kategorija" required>
+                <option value="Instruktor">Savezni instruktor</option>
+                <option value="Savezni">Savezni sudac</option>
+                <option value="Regionalni">Regionalni sudac</option>
+                <option selected="selected" value="Sudac" >Sudac</option>
+                <option value="Pripravnik">Sudac pripravnik</option>
+            </select>
+        </fieldset>
+        <button class="btn btn-success" ng-disabled="noviClan.$invalid">Dodaj člana</button>
+    </form>
+</div>
+
+<div class="w3-container w3-padding-64 w3-center" id="team">
+
+    <h2>Savezni instruktor</h2>
+    <div class="w3-row">
+        <div class="w3-quarter" ng-repeat="clan in clanovi| filter :{kategorija:'Instruktor'}">
+            <img src="{{clan.slika}}" style="width:45%" class="w3-round   w3-hover-opacity">
+            <h3 ng-hide="editId==clan.id">{{clan.ime}} {{clan.prezime}}</h3>
+            <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.ime"><input type="text" class="form-control" ng-model="clan.prezime"></p>
+            <p ng-hide="editId==clan.id">{{clan.rodjendan}} <br> {{clan.mjesto}}</p>
+            <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.rodjendan"></p>
+            <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.mjesto"></p>
+            <button ng-hide="editId==clan.id || level!='admin'" class="btn btn-info" ng-click="setEdit(clan.id)">Uredi</button>
+            <button ng-hide="editId!=clan.id" class="btn btn-info" ng-click="doneEditing(clan)">Gotovo</button>
+            <button class="btn btn-danger" ng-click="delete(clan.id)" ng-hide="level!='admin'">Obriši</button>
+        </div>
+    </div>
+    <h2>Savezni sudac</h2>
+    <div class="w3-row">
+    <div class="w3-quarter" ng-repeat="clan in clanovi| filter :{kategorija:'Savezni'}">
+        <img src="{{clan.slika}}" style="width:45%" class="w3-round   w3-hover-opacity">
+        <h3 ng-hide="editId==clan.id">{{clan.ime}} {{clan.prezime}}</h3>
+        <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.ime"><input type="text" class="form-control" ng-model="clan.prezime"></p>
+        <p ng-hide="editId==clan.id">{{clan.rodjendan}} <br> {{clan.mjesto}}</p>
+        <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.rodjendan"></p>
+        <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.mjesto"></p>
+        <button ng-hide="editId==clan.id || level!='admin'" class="btn btn-info" ng-click="setEdit(clan.id)">Uredi</button>
+        <button ng-hide="editId!=clan.id" class="btn btn-info" ng-click="doneEditing(clan)">Gotovo</button>
+        <button class="btn btn-danger" ng-click="delete(clan.id)" ng-hide="level!='admin'">Obriši</button>
+    </div>
+    </div>
+    <br>
+    <h2>Regionalni sudac</h2>
+    <div class="w3-row">
+        <div class="w3-quarter" ng-repeat="clan in clanovi| filter :{kategorija:'Regionalni'}">
+            <img src="{{clan.slika}}" style="width:45%" class="w3-round   w3-hover-opacity">
+            <h3 ng-hide="editId==clan.id">{{clan.ime}} {{clan.prezime}}</h3>
+            <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.ime"><input type="text" class="form-control" ng-model="clan.prezime"></p>
+            <p ng-hide="editId==clan.id">{{clan.rodjendan}} <br> {{clan.mjesto}}</p>
+            <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.rodjendan"></p>
+            <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.mjesto"></p>
+            <button ng-hide="editId==clan.id || level!='admin'" class="btn btn-info" ng-click="setEdit(clan.id)">Uredi</button>
+            <button ng-hide="editId!=clan.id" class="btn btn-info" ng-click="doneEditing(clan)">Gotovo</button>
+            <button class="btn btn-danger" ng-click="delete(clan.id)" ng-hide="level!='admin'">Obriši</button>
+        </div>
+    </div>
+    <h2>Sudac</h2>
+    <div class="w3-row">
+        <div class="w3-quarter" ng-repeat="clan in clanovi| filter :{kategorija:'Sudac'}">
+            <img src="{{clan.slika}}" style="width:45%" class="w3-round   w3-hover-opacity">
+            <h3 ng-hide="editId==clan.id">{{clan.ime}} {{clan.prezime}}</h3>
+            <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.ime"><input type="text" class="form-control" ng-model="clan.prezime"></p>
+            <p ng-hide="editId==clan.id">{{clan.rodjendan}} <br> {{clan.mjesto}}</p>
+            <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.rodjendan"></p>
+            <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.mjesto"></p>
+            <button ng-hide="editId==clan.id || level!='admin'" class="btn btn-info" ng-click="setEdit(clan.id)">Uredi</button>
+            <button ng-hide="editId!=clan.id" class="btn btn-info" ng-click="doneEditing(clan)">Gotovo</button>
+            <button class="btn btn-danger" ng-click="delete(clan.id)" ng-hide="level!='admin'">Obriši</button>
+        </div>
+    </div>
+    <h2>Sudac pripravnik</h2>
+    <div class="w3-row">
+        <div class="w3-quarter" ng-repeat="clan in clanovi| filter :{kategorija:'Pripravnik'}">
+            <img src="{{clan.slika}}" style="width:45%" class="w3-round   w3-hover-opacity">
+            <h3 ng-hide="editId==clan.id">{{clan.ime}} {{clan.prezime}}</h3>
+            <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.ime"><input type="text" class="form-control" ng-model="clan.prezime"></p>
+            <p ng-hide="editId==clan.id">{{clan.rodjendan}} <br> {{clan.mjesto}}</p>
+            <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.rodjendan"></p>
+            <p ng-hide="editId!=clan.id"><input type="text" class="form-control" ng-model="clan.mjesto"></p>
+            <button ng-hide="editId==clan.id || level!='admin'" class="btn btn-info" ng-click="setEdit(clan.id)">Uredi</button>
+            <button ng-hide="editId!=clan.id" class="btn btn-info" ng-click="doneEditing(clan)">Gotovo</button>
+            <button class="btn btn-danger" ng-click="delete(clan.id)" ng-hide="level!='admin'">Obriši</button>
+        </div>
+    </div>
+
+
+
+</div>
