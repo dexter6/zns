@@ -1,8 +1,13 @@
 <div class="w3-container w3-padding-64">
 
-    <textarea name="editor1" id="editor1" ng-model="test"></textarea>
+    <input type="file" name="slika" id="uploader">
+    <progress value="0" max="100" id="progress"></progress>
 
-    <button ng-click="getEditor()" class="btn btn-success">ok</button>
+    <div ng-repeat = "(key, value) in datoteke">
+        <a ng-href="{{value.url}}">{{value.ime}}</a>
+        <button class="btn btn-danger" ng-click="Obrisi(key)">Obriši</button>
+    </div>
+
 
 
 

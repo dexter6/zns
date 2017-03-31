@@ -1,4 +1,4 @@
-var app = angular.module('znsApp', ['ngRoute']);
+var app = angular.module('znsApp', ['ngRoute', 'ngSanitize']);
 
 
 app.config(function ($routeProvider) {
@@ -12,10 +12,10 @@ app.config(function ($routeProvider) {
     }).when('/reg', {
         templateUrl:'app/views/templates/reg.html',
         controller: 'RegCtrl'
-    }).when('/clanovi', {
+    }).when('/clanovi:part*', {
         templateUrl:'app/views/templates/clanovi.html',
         controller: 'ClanoviCtrl'
-    }).when('/dokumenti', {
+    }).when('/dokumenti:part*', {
         templateUrl:'app/views/templates/dokumenti.html',
         controller: 'DokumentiCtrl'
     }).when('/login', {

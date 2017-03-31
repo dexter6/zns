@@ -1,4 +1,4 @@
-<div class="w3-third" ng-repeat="album in albumi" ng-click="openAlbum(album)">
+<div class="w3-third" ng-repeat="album in albumi" ng-click="openAlbum($index)">
     <img ng-src="{{album.thumb}}">
     <h1>{{album.ime}}</h1>
     <p>{{album.opis}}</p>

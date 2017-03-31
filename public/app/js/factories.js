@@ -1,34 +1,40 @@
 app.factory('DataFactory', function ($http) {
     return{
         getVijesti:function (callback) {
-            $http.get('api/vijesti', {cache:true}).success(callback);
+            $http.get('https://znskutina.firebaseio.com/vijesti.json', {cache:true}).success(callback);
         },
         postVijesti:function (vijest, callback) {
-            $http.post('api/vijesti', {vijest:vijest}).success(callback);
+            $http.post('https://znskutina.firebaseio.com/vijesti.json', vijest).success(callback);
         },
         deleteVijest:function (id, callback) {
-            $http.delete('api/vijesti/'+id).success(callback);
+            $http.delete('https://znskutina.firebaseio.com/vijesti/'+id + ".json").success(callback);
         },
-        editVijesti:function (vijest, callback) {
-            $http.put('/api/vijesti', {vijest:vijest}).success(callback);
+        editVijesti:function (vijest, id, callback) {
+            $http.patch('https://znskutina.firebaseio.com/vijesti/'+id + ".json", vijest).success(callback);
         },
-        getClanovi:function (callback) {
-            $http.get('api/clanovi', {cache:true}).success(callback);
+        getClanovi:function (part, callback) {
+            $http.get('https://znskutina.firebaseio.com/clanovi' + part + '.json', {cache:true}).success(callback);
         },
         postClan:function (clan, callback) {
-            $http.post('api/clanovi',{clan:clan}).success(callback);
+            $http.post('https://znskutina.firebaseio.com/clanovi.json',clan).success(callback);
         },
         editClan:function (clan, callback) {
             $http.put('/api/clanovi', {clan:clan}).success(callback);
         },
         deleteClan:function (id, callback) {
-            $http.delete('/api/clanovi/' + id).success(callback);
+            $http.delete('https://znskutina.firebaseio.com/clanovi/'+id + ".json").success(callback);
         },
         getAlbumi:function (callback) {
-            $http.get('/api/albumi').success(callback);
+            $http.get('https://znskutina.firebaseio.com/albumi.json').success(callback);
         },
         getSlike:function (callback) {
-            $http.get('/api/slike').success(callback);
+            $http.get('https://znskutina.firebaseio.com/slike.json').success(callback);
+        },
+        getDokumenti:function (part, callback) {
+            $http.get('https://znskutina.firebaseio.com/dokumenti' + part + '.json').success(callback);
+        },
+        deleteDokument:function (key, callback) {
+            $http.delete('https://znskutina.firebaseio.com/dokumenti'+key + ".json").success(callback);
         }
     }
 });
@@ -148,3 +154,4 @@ app.factory('interceptorService', function($location, $q, AuthToken, $rootScope)
 
 
 });
+

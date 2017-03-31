@@ -1,6 +1,6 @@
-app.controller('NavCtrl', function($scope, $location, $rootScope) {
+app.controller('NavCtrl', function($scope, $location, $rootScope, $route) {
 
-    $scope.authen = $rootScope.authenticated;
+    $scope.authen = firebase.auth().currentUser;
     console.log($scope.authen + 'Ovo je navCtrl');
     $scope.checkUrl = function (value){
         $scope.url = $location.url();
@@ -19,29 +19,74 @@ app.controller('NavCtrl', function($scope, $location, $rootScope) {
 
     }
 
+    $scope.login=function(){
+
+
+        firebase.auth().signInWithEmailAndPassword("denis.vidalin@gmail.com", "De13129936")
+            .catch(function(error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                if (errorCode === 'auth/wrong-password') {
+                    alert('Wrong password.');
+                } else {
+                    alert(errorMessage);
+                }
+                console.log(error);
+            }).then(function (user) {
+                $scope.authen = user.email;
+                $rootScope.user = $scope.authen;
+                console.log(user.email);
+                $route.reload();
+        });
+
+
+
+
+
+    };
+
+    $scope.signOut = function () {
+
+        firebase.auth().signOut().then(function() {
+            console.log('Signed Out');
+            $scope.authen = null;
+            $rootScope.user = null;
+            $route.reload();
+        }, function(error) {
+            console.error('Sign Out Error', error);
+        });
+    };
+
 
 
     $scope.nav = {"#/":"Početna", "#/clanovi":"Članovi", "#/dokumenti":"Dokumenti", "#/galerija":"Galerija"};
+
+
+
+
+
+
 });
 
-app.controller('ClanoviCtrl', function ($scope, DataFactory, $rootScope) {
+app.controller('ClanoviCtrl', function ($scope, DataFactory, $rootScope, $routeParams) {
 
-    if(!angular.isDefined($rootScope.user)){
-        $scope.level = 'nije admin';
-    }else{
-        $scope.level = $rootScope.user.level;
-    }
-    console.log($scope.level);
+
+
 
 
 
     $scope.getClans = function () {
-        DataFactory.getClanovi(function (data) {
-            $scope.clanovi = data.clanovi.map(function (x) {
-                if(x.slika == null){
-                    x.slika = '../assets/img/bruno.jpg'
+        DataFactory.getClanovi($routeParams.part, function (data) {
+            $scope.clanovi= Object.keys(data).map(function (k) {
+
+                return data[k];
+            });
+
+            $scope.clanovi.map(function (k) {
+                if(!angular.isDefined(k.slika)){
+                    k.slika = "assets/img/bruno.jpg";
                 }
-                return x;
             });
             console.log($scope.clanovi);
 
@@ -51,6 +96,8 @@ app.controller('ClanoviCtrl', function ($scope, DataFactory, $rootScope) {
     $scope.getClans();
     $scope.add = false;
     $scope.editId=-1;
+
+
 
 
     $scope.setEdit = function (i) {
@@ -99,12 +146,12 @@ app.controller('ForumCtrl', function ($scope) {
 
 app.controller('VijestiCtrl', function ($scope, DataFactory, $window, $rootScope ) {
 
-    $scope.auth = $rootScope.authenticated;
+    $scope.auth = $rootScope.user;
     console.log($scope.auth);
-    if(!angular.isDefined($rootScope.user)){
-        $scope.level = 'nije admin';
+    if($scope.user == "denis.vidalin@gmail.com"){
+        $scope.level = 'admin';
     }else{
-        $scope.level = $rootScope.user.level;
+        $scope.level = "nije, admin"
     }
     console.log($scope.level);
 
@@ -128,27 +175,50 @@ app.controller('VijestiCtrl', function ($scope, DataFactory, $window, $rootScope
     $scope.add = false;
 
     DataFactory.getVijesti(function (data) {
-        $scope.vijesti = data.vijesti;
+        $scope.vijesti = data;
+        console.log($scope.vijesti);
+        $(function() {
+            $('#carousel').carouFredSel({
+                responsive: true,
+                items: {
+                    visible: 1,
+
+                },
+                scroll: {
+                    duration: 350,
+                    timeoutDuration: 2500,
+                    fx: 'uncover-fade'
+                },
+                pagination: '#pager',
+                swipe: {
+                    onMouse: true,
+                    onTouch: true
+                },
+                mouswheel: true,
+                cookie: true
+            });
+        });
     });
 
-    $scope.setEdit = function (i) {
-        $scope.editId = i;
+    $scope.setEdit = function (key) {
+        $scope.editId = key;
     };
 
     $scope.doneEditing = function (i) {
         $scope.editId = -1;
-        DataFactory.editVijesti($scope.vijesti[i], function (res) {
+        DataFactory.editVijesti($scope.vijesti[i], i, function (res) {
             console.log(res);
         });
     };
 
-    $scope.delete = function (index) {
+    $scope.delete = function (key) {
         if(confirm('Jeste li sigurni?')){
-            DataFactory.deleteVijest($scope.vijesti[index].id, function (data) {
-                $scope.vijesti = $scope.vijesti.filter(function (vijest, i) {
-                    if (i!= index )
-                        return true;
-                })
+            DataFactory.deleteVijest(key, function (data) {
+
+                console.log(key);
+                delete $scope.vijesti[key];
+                console.log($scope.vijesti);
+
             })
         }
     };
@@ -163,30 +233,79 @@ app.controller('VijestiCtrl', function ($scope, DataFactory, $window, $rootScope
     
     $scope.addVijest = function (valid) {
 
+
         console.log(tinyMCE.activeEditor.getContent());
         if(tinyMCE.activeEditor.getContent()==""){
             $window.alert('Unesite tekst vijesti!');
         }
         else{
 
-        $scope.new.tekst = tinyMCE.activeEditor.getContent();
+        $scope.new.sadrzaj = tinyMCE.activeEditor.getContent();
+        $scope.new.autor = $rootScope.user;
+        $scope.new.timestamp = new Date();
+
+
+
+
+        console.log($scope.new);
+
+
+
          DataFactory.postVijesti($scope.new, function (data) {
-         $scope.vijesti.push($scope.new);
-         $scope.add = false;
-         $scope.new = {};
-         tinyMCE.activeEditor.setContent('');
-         })
+
+             console.log(data.name);
+
+             $scope.vijesti[data] = $scope.new;
+            $scope.add = false;
+            $scope.new = {};
+            tinyMCE.activeEditor.setContent('');
+
+         });
 
 
-    }};
+
+
+
+
+        }};
+
+
+
+
+
+
+
+
+
+
+
 
 });
 
 
 
 
-app.controller('DokumentiCtrl', function ($scope, $rootScope) {
-    console.log("Dokumenti");
+app.controller('DokumentiCtrl', function ($scope, $rootScope, DataFactory, $routeParams) {
+
+
+    var part = $routeParams.part;
+    var ref = firebase.database().ref();
+    var dbRef = ref.child('dokumenti' + part);
+
+
+
+    DataFactory.getDokumenti(part, function (data) {
+        $scope.datoteke = data;
+
+
+        console.log($scope.datoteke);
+
+
+    });
+
+
+
+
 
     $scope.tinyinit = function () {
         tinymce.init({
@@ -218,6 +337,61 @@ app.controller('DokumentiCtrl', function ($scope, $rootScope) {
         console.log(tinyMCE.activeEditor.getContent());
     }
 
+    var uploader = document.getElementById('uploader');
+    var progressbar = document.getElementById('progress');
+
+    uploader.addEventListener('change', function (e) {
+        var file = e.target.files[0];
+
+
+
+        var storageRef = firebase.storage().ref('dokumenti/' + part + '/' + file.name);
+
+        var task = storageRef.put(file);
+
+        task.on('state_changed',
+            function progress(snapshot){
+
+                var postotak = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log(postotak);
+                progressbar.value = postotak;
+            },
+            function error(err) {
+
+            },
+            function complete() {
+
+                console.log(task.snapshot);
+                console.log(dbRef);
+                var key = dbRef.push().key;
+                console.log(key);
+                var updates = {};
+                var datoteka = {ime:file.name, url:task.snapshot.downloadURL}
+                updates[key] = datoteka;
+                dbRef.update(updates);
+                $scope.datoteke[key] = datoteka;
+                console.log($scope.datoteke);
+            }
+        );
+
+
+
+    });
+
+    $scope.Obrisi = function (key) {
+        console.log("Brišem");
+        DataFactory.deleteDokument(part + '/' +key, function (data) {
+            delete $scope.datoteke[key];
+            console.log($scope.datoteke);
+
+        });
+    }
+
+
+
+
+
+
 
 });
 
@@ -227,10 +401,14 @@ app.controller('GalerijaCtrl', function ($scope, $rootScope, DataFactory) {
     $scope.album = $rootScope.album;
 
     DataFactory.getSlike(function (data) {
-        $scope.slike = data.slike.filter(function (x) {
-            if(x.album==$rootScope.album.id)
+        $scope.slike = data.filter(function (x) {
+            console.log("X: " + x.album);
+            console.log("Scope: " + $scope.album);
+            if(x.album == $scope.album){
                 return x;
+            }
         });
+
         console.log($scope.slike);
     });
 
@@ -264,46 +442,91 @@ app.controller('GalerijaCtrl', function ($scope, $rootScope, DataFactory) {
 
 app.controller('AlbumiCtrl', function ($scope, DataFactory, $rootScope, $location) {
     DataFactory.getAlbumi(function (data) {
-        $scope.albumi = data.albumi;
-        console.log($scope.albumi);
+
+        console.log(data);
+        $scope.albumi = data;
+
+
     });
 
     $scope.openAlbum = function (album) {
         $rootScope.album = album;
-        console.log($rootScope.albumId);
+        //console.log($rootScope.albumId);
+
+
         $location.path('/slike');
+
+
     }
 
 });
 
-app.controller('LoginCtrl', function ($scope, $rootScope, Auth, $location) {
+app.controller('LoginCtrl', function ($scope, $rootScope, $location) {
 
-    if ($rootScope.authenticated){
-        Auth.logout();
-    }
+
+
 
     $scope.login=function(){
 
-        Auth.login($scope.credentials, function(data){
 
-            console.log(data);
-            $scope.message=data.description;
-
+        firebase.auth().signInWithEmailAndPassword("denis.vidalin@gmail.com", "De13129936")
+            .catch(function(error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                if (errorCode === 'auth/wrong-password') {
+                    alert('Wrong password.');
+                } else {
+                    alert(errorMessage);
+                }
+                console.log(error);
+            }).then(function (user) {
+            $rootScope.user = user.email;
+            console.log(user.email);
         });
 
-    }
+
+
+
+
+    };
+
+    $scope.signOut = function () {
+
+        firebase.auth().signOut().then(function() {
+            console.log('Signed Out');
+            $rootScope.user = null;
+        }, function(error) {
+            console.error('Sign Out Error', error);
+        });
+    };
 
 });
 
-app.controller('RegCtrl', function ($scope, $rootScope,$location, Auth) {
-    if($rootScope.authenticated)
+app.controller('RegCtrl', function ($scope, $rootScope,$location) {
+    if($rootScope.user != null)
         $location.path('/')
 
+    console.log($rootScope.user);
+
     $scope.register = function () {
-        Auth.register($scope.newuser, function (res) {
-            Auth.login(user, function (data) {
-                console.log(data);
-            })
-        })
+
+        firebase.auth().createUserWithEmailAndPassword($scope.newuser.mail, $scope.newuser.password)
+            .catch(function(error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                if (errorCode == 'auth/weak-password') {
+                    alert('The password is too weak.');
+                } else {
+                    alert(errorMessage);
+                }
+                console.log(error);
+            }).then(function (user) {
+                console.log(user.emailVerified);
+                if(!user.emailVerified){
+                    user.sendEmailVerification();
+                }
+        });
     }
 });
