@@ -115,7 +115,7 @@ app.controller('ClanoviCtrl', function ($scope, DataFactory, $rootScope, $routeP
 
 
 
-            DataFactory.postClan($scope.new, function (data) {
+            DataFactory.postClan($routeParams.part, $scope.new, function (data) {
                 if($scope.new.slika==null){
                     $scope.new.slika='../assets/img/bruno.jpg';
                 }
@@ -174,9 +174,69 @@ app.controller('VijestiCtrl', function ($scope, DataFactory, $window, $rootScope
     $scope.editId = -1;
     $scope.add = false;
 
+    var uploader = document.getElementById('uploader');
+    var slika = document.getElementById('slika');
+    var status = document.getElementById('status');
+    var progressbar = document.getElementById('progress');
+
+    uploader.onchange = function () {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            slika.src = e.target.result;
+        };
+
+        var file = this.files[0];
+
+        reader.readAsDataURL(file);
+
+        var storageRef = firebase.storage().ref('vijesti/' + file.name);
+
+        var task = storageRef.put(file);
+
+        task.on('state_changed',
+            function progress(snapshot){
+
+                var postotak = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log(postotak);
+                progressbar.value = postotak;
+                $scope.status = postotak + '%';
+            },
+            function error(err) {
+
+            },
+            function complete() {
+
+                $scope.status = 'Uploadano!';
+                $scope.url = task.snapshot.downloadURL;
+                console.log($scope.url);
+            }
+        );
+    };
+
+
     DataFactory.getVijesti(function (data) {
         $scope.vijesti = data;
-        console.log($scope.vijesti);
+
+        $scope.vijestarray = [];
+        for(var key in $scope.vijesti){
+            console.log($scope.vijesti[key]);
+            $scope.vijestarray.push($scope.vijesti[key]);
+        }
+
+        console.log($scope.vijestarray);
+
+        $scope.vijestarray.sort(function(a,b){
+            console.log(a.timestamp);
+            console.log(b.timestamp);
+            return a.timestamp - b.timestamp;
+        });
+
+        console.log($scope.vijestarray);
+
+
+
+        console.log(Object);
         $(function() {
             $('#carousel').carouFredSel({
                 responsive: true,
@@ -243,6 +303,7 @@ app.controller('VijestiCtrl', function ($scope, DataFactory, $window, $rootScope
         $scope.new.sadrzaj = tinyMCE.activeEditor.getContent();
         $scope.new.autor = $rootScope.user;
         $scope.new.timestamp = new Date();
+        $scope.new.slika = $scope.url;
 
 
 
@@ -285,7 +346,7 @@ app.controller('VijestiCtrl', function ($scope, DataFactory, $window, $rootScope
 
 
 
-app.controller('DokumentiCtrl', function ($scope, $rootScope, DataFactory, $routeParams) {
+app.controller('DokumentiCtrl', function ($scope, $rootScope, DataFactory, $routeParams, $route) {
 
 
     var part = $routeParams.part;
@@ -341,38 +402,65 @@ app.controller('DokumentiCtrl', function ($scope, $rootScope, DataFactory, $rout
     var progressbar = document.getElementById('progress');
 
     uploader.addEventListener('change', function (e) {
-        var file = e.target.files[0];
+        var files = e.target.files;
 
 
 
-        var storageRef = firebase.storage().ref('dokumenti/' + part + '/' + file.name);
 
-        var task = storageRef.put(file);
+        for (var i = 0; i < files.length; i++){
 
-        task.on('state_changed',
-            function progress(snapshot){
 
-                var postotak = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                console.log(postotak);
-                progressbar.value = postotak;
-            },
-            function error(err) {
 
-            },
-            function complete() {
+            var file = files[i];
+            uploadFileAsPromise(file);
 
-                console.log(task.snapshot);
-                console.log(dbRef);
-                var key = dbRef.push().key;
-                console.log(key);
-                var updates = {};
-                var datoteka = {ime:file.name, url:task.snapshot.downloadURL}
-                updates[key] = datoteka;
-                dbRef.update(updates);
-                $scope.datoteke[key] = datoteka;
-                console.log($scope.datoteke);
-            }
-        );
+
+
+
+        }
+
+
+
+        function uploadFileAsPromise(file) {
+
+            return new Promise(function (resolve, reject) {
+                var storageRef = firebase.storage().ref('dokumenti/' + part + '/' + file.name);
+
+                var task = storageRef.put(file);
+
+                task.on('state_changed',
+                    function progress(snapshot){
+
+                        var postotak = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+
+                        progressbar.value = postotak;
+                    },
+                    function error(err) {
+
+                    },
+                    function complete() {
+
+                        console.log("Complete:");
+                        console.log(files[i]);
+                        var key = dbRef.push().key;
+                        var updates = {};
+                        var datoteka = {ime:file.name, url:task.snapshot.downloadURL};
+                        console.log(datoteka);
+                        updates[key] = datoteka;
+                        dbRef.update(updates);
+                       // $scope.datoteke[key] = datoteka;
+                        $route.reload();
+                    }
+                );
+
+            });
+
+
+
+
+        }
+
+
 
 
 
@@ -459,6 +547,10 @@ app.controller('AlbumiCtrl', function ($scope, DataFactory, $rootScope, $locatio
 
     }
 
+    Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.5/themes/classic/galleria.classic.min.js');
+    Galleria.run('.galleria');
+
+
 });
 
 app.controller('LoginCtrl', function ($scope, $rootScope, $location) {
@@ -529,4 +621,32 @@ app.controller('RegCtrl', function ($scope, $rootScope,$location) {
                 }
         });
     }
+});
+
+app.controller('VijestCtrl', function ($scope, $rootScope, $location, $routeParams) {
+
+    var key = $routeParams.key;
+
+    var slika = document.getElementById('slika');
+    var naslov = document.getElementById('naslov');
+    var sadrzaj = document.getElementById('sadrzaj');
+
+    console.log(firebase.database().ref('/vijesti+key'));
+
+
+    firebase.database().ref('/vijesti'+key).once('value').then(function (snapshot) {
+        console.log('Ulazim u then!');
+        var vijest = snapshot.val();
+        slika.src = vijest.slika;
+        naslov.textContent = vijest.naslov;
+        sadrzaj.innerHTML = vijest.sadrzaj;
+
+    }).catch(function (err) {
+        console.log(err);
+    });
+
+
+
+
+
 });

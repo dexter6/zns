@@ -15,8 +15,8 @@ app.factory('DataFactory', function ($http) {
         getClanovi:function (part, callback) {
             $http.get('https://znskutina.firebaseio.com/clanovi' + part + '.json', {cache:true}).success(callback);
         },
-        postClan:function (clan, callback) {
-            $http.post('https://znskutina.firebaseio.com/clanovi.json',clan).success(callback);
+        postClan:function (part, clan, callback) {
+            $http.post('https://znskutina.firebaseio.com/clanovi' + part + '.json',clan).success(callback);
         },
         editClan:function (clan, callback) {
             $http.put('/api/clanovi', {clan:clan}).success(callback);

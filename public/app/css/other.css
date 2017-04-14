@@ -1,0 +1,129 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: #fff;
+    min-height: 600px;
+}
+body * {
+    font-family: Arial, Geneva, SunSans-Regular, sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+}
+
+#wrapper {
+    width: 100%;
+    min-width: 900px;
+    height: 500px;
+    margin: -250px 0 0 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+#carousel div {
+    height: 500px;
+    float: left;
+
+
+}
+#carousel img {
+    min-width: 100%;
+    min-height: 100%;
+}
+#title {
+    text-align: center;
+    width: 100%;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+}
+#title h3 {
+    text-shadow:
+            0 3px 3px rgba( 0, 0, 0, 0.3 ),
+            0 -3px 3px rgba( 0, 0, 0, 0.3 ),
+            3px 0 3px rgba( 0, 0, 0, 0.3 ),
+            -3px 0 3px rgba( 0, 0, 0, 0.3 );
+
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 50px;
+    color: #fff;
+    margin: 0;
+}
+#title a {
+    color: #fff;
+}
+#title a:hover {
+    background: rgba( 0, 0, 0, 0.5 );
+    padding: 2px 5px;
+}
+
+#vijesti-container{
+    padding: 50px;
+    margin-top: 500px;
+    clear: both;
+
+}
+#pager {
+    border-radius: 20px;
+    background: #fff;
+    text-align: center;
+    width: 120px;
+    height: 50px;
+    padding-top: 2px;
+    margin: 235px 0 0 -60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+#pager a.selected span {
+    background: #666;
+}
+#pager a {
+    display: inline-block;
+    padding: 5px;
+}
+#pager span {
+    border-radius: 10px;
+    background: #ccc;
+    text-indent: -100px;
+    line-height: 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.image {
+    position: relative;
+    width: 100%; /* for IE 6 */
+}
+
+.naslov-slike {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    color: white;
+    font: bold 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+
+}
+
+.caroufredsel_wrapper{
+    height: 500px !important;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+
+
+

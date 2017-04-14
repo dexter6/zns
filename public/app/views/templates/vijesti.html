@@ -3,10 +3,11 @@
 <header class="w3-container w3-red w3-center w3-padding-2 row" ng-cloak>
     <div id="wrapper">
         <div id="carousel">
-            <div class="image" ng-repeat="vijest in vijesti">
-                <img ng-src="{{vijest.slika}}" />
-                <h2 class="naslov-slike">{{vijest.naslov}}</h2>
-
+            <div class="image" ng-repeat="(key, value) in vijesti | limitTo: 5">
+                <a ng-href="#/vijest/{{key}}">
+                <img ng-src="{{value.slika}}" />
+                <h2 class="naslov-slike">{{value.naslov}}</h2>
+                </a>
             </div>
         </div>
 
@@ -28,9 +29,13 @@
                 <label>Naslov:</label>
                 <input name = "naslov" class="form-control" type="text" ng-model="new.naslov" required>
             </fieldset>
-            <fieldset class="form-group"">
+            <fieldset class="form-group">
                 <label>Slika:</label>
-                <input name = "naslov" class="form-control" type="file"  id="slika">
+                <input name = "naslov" class="form-control" type="file"  id="uploader">
+                <img id="slika">
+                <br><br>
+                <progress value="0" max="100" id="progress"></progress>
+                <span id="status">{{status}}</span>
             </fieldset>
             <fieldset class="form-group" ng-class="{'has-error': novaVijest.tekst.$invalid && !novaVijest.tekst.$pristine}">
                 <label>Sadržaj:</label><br>
@@ -45,7 +50,7 @@
         <div class="col-md-4">
 
             <img ng-src="{{value.slika}}" width="95%"/><br>
-            <button ng-hide="editId!=key" class="btn btn-info">Promijeni sliku</button>
+            <input ng-hide="editId!=key" type="file" id = "promijenisliku"></input>
 
         </div>
 

@@ -9,6 +9,9 @@ app.config(function ($routeProvider) {
     }).when('/galerija', {
         templateUrl:'app/views/templates/albumi.html',
         controller: 'AlbumiCtrl'
+    }).when('/vijest:key*', {
+        templateUrl:'app/views/templates/vijest.html',
+        controller: 'VijestCtrl'
     }).when('/reg', {
         templateUrl:'app/views/templates/reg.html',
         controller: 'RegCtrl'
